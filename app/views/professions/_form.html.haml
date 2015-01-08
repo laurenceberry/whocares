@@ -1,0 +1,20 @@
+= form_for @profession do |f|
+  - if @profession.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@profession.errors.count, "error")
+        prohibited
+        this profession from being saved:
+      %ul
+        - @profession.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  %p
+    = f.submit

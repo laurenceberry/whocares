@@ -1,0 +1,9 @@
+%p
+  %strong Name:
+  = @role.name
+%p
+  %strong Description:
+  = @role.description
+
+= link_to 'Back', profession_path(@profession)
+= link_to 'Edit', edit_profession_role_path(@profession, @role)

@@ -1,0 +1,16 @@
+%h1
+  Add new role
+
+- if @role.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@role.errors.count, "error")
+      prohibited
+      this role from being saved:
+    %ul
+      - @role.errors.full_messages.each do |msg|
+        %li= msg
+
+= render 'form'
+
+= link_to 'Back', professions_path
