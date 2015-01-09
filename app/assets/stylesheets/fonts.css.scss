@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'frutiger_reg';
-    src: url('frutiger_reg.eot?#iefix') format('embedded-opentype'),
-         url('frutiger_reg.woff') format('woff'),
-         url('frutiger_reg.ttf')  format('truetype');
+    src: url('/assets/frutiger_reg.eot?#iefix') format('embedded-opentype'),
+         url('/assets/frutiger_reg.woff') format('woff'),
+         url('/assets/frutiger_reg.ttf')  format('truetype');
 }
 
 @font-face {
     font-family: 'frutiger_light';
-    src: url('frutiger_light.eot?#iefix') format('embedded-opentype'),
-         url('frutiger_light.woff') format('woff'),
-         url('frutiger_light.ttf')  format('truetype');
+    src: url('/assets/frutiger_light.eot?#iefix') format('embedded-opentype'),
+         url('/assets/frutiger_light.woff') format('woff'),
+         url('/assets/frutiger_light.ttf')  format('truetype');
 }
 
 @font-face {
     font-family: 'frutiger_black_italic';
-    src: url('FrutigerLT-BlackItalic.eot?#iefix') format('embedded-opentype'),
-         url('FrutigerLT-BlackItalic.woff') format('woff'),
-         url('FrutigerLT-BlackItalic.ttf')  format('truetype');
+    src: url('/assets/FrutigerLT-BlackItalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/FrutigerLT-BlackItalic.woff') format('woff'),
+         url('/assets/FrutigerLT-BlackItalic.ttf')  format('truetype');
 }
