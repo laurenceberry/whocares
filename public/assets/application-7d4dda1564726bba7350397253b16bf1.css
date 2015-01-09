@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'frutiger_reg';
+  src: url("frutiger_reg.eot?#iefix") format("embedded-opentype"), url("frutiger_reg.woff") format("woff"), url("frutiger_reg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_light';
+  src: url("frutiger_light.eot?#iefix") format("embedded-opentype"), url("frutiger_light.woff") format("woff"), url("frutiger_light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_black_italic';
+  src: url("FrutigerLT-BlackItalic.eot?#iefix") format("embedded-opentype"), url("FrutigerLT-BlackItalic.woff") format("woff"), url("FrutigerLT-BlackItalic.ttf") format("truetype");
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+body {
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "frutiger_reg", arial, sans-serif;
+  color: white;
+}
+
+/* line 6, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+h1 {
+  font-size: 1.8em;
+  margin: 13px 0;
+  font-family: "frutiger_reg", arial, sans-serif;
+}
+
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+p, a {
+  font-size: 1.15em;
+  line-height: 1.2em;
+}
+
+/* line 16, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:link {
+  text-decoration: none;
+  color: #4071b6;
+}
+/* line 20, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:visited {
+  color: #4071b6;
+}
+/* line 23, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:hover {
+  background: none;
+  color: #4071b6;
+  text-decoration: underline;
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body {
+  background-color: #4071b6;
+  padding: 0;
+  margin: 0;
+}
+/* line 6, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body div, body header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.button {
+  background: white;
+  color: #4071b6;
+  padding: 10px 10px 8px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+/* line 9, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.button:hover {
+  background: #ebebeb;
+  text-decoration: none;
+}
+
+/* line 13, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header .button {
+  color: #3cb47a;
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/professions.css.sass */
+.professions#index ul, .professions#show ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 5, /Users/laurenceberry/code/whocares/app/assets/stylesheets/professions.css.sass */
+.professions#index ul li, .professions#show ul li {
+  margin-bottom: 25px;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header {
+  padding: 15px 25px;
+  min-height: 70px;
+  width: 100%;
+  background: #3cb47a;
+}
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .button {
+  float: right;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index {
+  text-align: center;
+}
+/* line 4, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index .intro {
+  background-color: white;
+  color: #4071b6;
+  padding: 90px 0 75px 0;
+  margin-bottom: 75px;
+}
+/* line 9, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index h1.logo {
+  font-family: frutiger_black_italic, arial, sans-serif;
+  font-weight: 600;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+/* line 14, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index h2 {
+  margin-bottom: 50px;
+}
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header {
+  padding: 15px 25px;
+  min-height: 70px;
+  width: 100%;
+  background: #3cb47a;
+}
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .button {
+  float: right;
+}
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.button {
+  background: white;
+  color: #4071b6;
+  padding: 10px 10px 8px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+/* line 9, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.button:hover {
+  background: #ebebeb;
+  text-decoration: none;
+}
+
+/* line 13, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header .button {
+  color: #3cb47a;
+}
+@font-face {
+  font-family: 'frutiger_reg';
+  src: url("frutiger_reg.eot?#iefix") format("embedded-opentype"), url("frutiger_reg.woff") format("woff"), url("frutiger_reg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_light';
+  src: url("frutiger_light.eot?#iefix") format("embedded-opentype"), url("frutiger_light.woff") format("woff"), url("frutiger_light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_black_italic';
+  src: url("FrutigerLT-BlackItalic.eot?#iefix") format("embedded-opentype"), url("FrutigerLT-BlackItalic.woff") format("woff"), url("FrutigerLT-BlackItalic.ttf") format("truetype");
+}
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index {
+  text-align: center;
+}
+/* line 4, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index .intro {
+  background-color: white;
+  color: #4071b6;
+  padding: 90px 0 75px 0;
+  margin-bottom: 75px;
+}
+/* line 9, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index h1.logo {
+  font-family: frutiger_black_italic, arial, sans-serif;
+  font-weight: 600;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+/* line 14, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index h2 {
+  margin-bottom: 50px;
+}
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body {
+  background-color: #4071b6;
+  padding: 0;
+  margin: 0;
+}
+/* line 6, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body div, body header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/professions.css.sass */
+.professions#index ul, .professions#show ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 5, /Users/laurenceberry/code/whocares/app/assets/stylesheets/professions.css.sass */
+.professions#index ul li, .professions#show ul li {
+  margin-bottom: 25px;
+}
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+body {
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "frutiger_reg", arial, sans-serif;
+  color: white;
+}
+
+/* line 6, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+h1 {
+  font-size: 1.8em;
+  margin: 13px 0;
+  font-family: "frutiger_reg", arial, sans-serif;
+}
+
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+p, a {
+  font-size: 1.15em;
+  line-height: 1.2em;
+}
+
+/* line 16, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:link {
+  text-decoration: none;
+  color: #4071b6;
+}
+/* line 20, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:visited {
+  color: #4071b6;
+}
+/* line 23, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:hover {
+  background: none;
+  color: #4071b6;
+  text-decoration: underline;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
