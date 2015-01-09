@@ -20,7 +20,7 @@ class ProfessionsController < ApplicationController
     @profession = Profession.new(profession_params)
 
     if @profession.save
-      redirect_to @profession
+      redirect_to(professions_path)
     else
       render 'new'
     end

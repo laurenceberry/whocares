@@ -4,7 +4,7 @@ class Profession < ActiveRecord::Base
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
-      Profession.create! row.to_hash
+      Profession.create!(row.to_hash) unless Profession.find_by(name:  row.to_hash['name'])
     end
   end
 end

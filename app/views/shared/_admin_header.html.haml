@@ -2,16 +2,19 @@
   %header.admin-header
     =link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'button'
     - if professions_index_page
+      .upload-form
+        =form_tag import_professions_path, multipart: true do
+          = file_field_tag :file
+          =submit_tag "Upload professions", :class => 'button'
+
       = link_to 'Add new profession', new_profession_path, :class => 'button'
 
-      =form_tag import_professions_path, multipart: true do
-        = file_field_tag :file
-        =submit_tag "Upload professions"
-
     - if profession_roles_index_page
-      =form_tag import_profession_roles_path, multipart: true do
-        = file_field_tag :file
-        =submit_tag "Upload roles"
+      .upload-form
+        =form_tag import_profession_roles_path, multipart: true do
+          = file_field_tag :file
+          =submit_tag "Upload roles", :class => 'button'
+
       = link_to 'Add new role', new_profession_role_path(@profession), :class => 'button'
       = link_to 'Edit profession', edit_profession_path(@profession), :class => 'button'
       = link_to 'Destroy', profession_path(@profession),

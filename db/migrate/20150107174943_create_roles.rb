@@ -4,7 +4,6 @@ class CreateRoles < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.references :profession, index: true
-
       t.timestamps
     end
   end
