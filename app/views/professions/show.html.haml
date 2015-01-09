@@ -2,19 +2,9 @@
 %p= @profession.description
 
 %h2 Roles
-
-= link_to 'New role', new_profession_role_path(@profession), :class => 'button'
-
 %ul
   - @profession.roles.each do |role|
     %li
-      = role.name
-      = role.description
-      = link_to 'Show', profession_role_path(@profession, role), :class => 'button'
-      = link_to 'Edit', edit_profession_role_path(@profession,role), :class => 'button'
-      = link_to 'Destroy Role', [role.profession, role],         |
-          method: :delete,                                       |
-          data: { confirm: 'Are you sure?' }, :class => 'button' |
+      = link_to role.name, profession_role_path(@profession, role), :class => 'button'
 
 = link_to 'Back', professions_path, :class => 'button'
-= link_to 'Edit', edit_profession_path(@profession), :class => 'button'

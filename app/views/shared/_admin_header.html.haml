@@ -1,0 +1,18 @@
+-if admin_signed_in?
+  %header.admin-header
+    =link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'button'
+    - if professions_index_page
+      = link_to 'Add new profession', new_profession_path, :class => 'button'
+
+    - if profession_show_page
+      = link_to 'Add new role', new_profession_role_path(@profession), :class => 'button'
+      = link_to 'Edit profession', edit_profession_path(@profession), :class => 'button'
+      = link_to 'Destroy', profession_path(@profession),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' }, :class => 'button'
+
+    - if role_show_page
+      = link_to 'Edit role', edit_profession_role_path(@profession,@role), :class => 'button'
+      = link_to 'Remove role', [@role.profession, @role],         |
+          method: :delete,                                       |
+          data: { confirm: 'Are you sure?' }, :class => 'button' |

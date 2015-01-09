@@ -1,14 +1,8 @@
 %h1 Listing professions
 
-= link_to 'Add new profession', new_profession_path, :class => 'button'
-
 %ul
   - @professions.each do |profession|
     %li
-      = profession.name
-      = profession.description
-      = link_to 'Show', profession_path(profession), :class => 'button'
-      = link_to 'Edit', edit_profession_path(profession), :class => 'button'
-      = link_to 'Destroy', profession_path(profession),
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' }, :class => 'button'
+      = link_to profession.name, profession_path(profession), :class => 'button'
+
+= link_to 'Back', root_path, :class => 'button'
