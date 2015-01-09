@@ -3,6 +3,6 @@
 %ul
   - @professions.each do |profession|
     %li
-      = link_to profession.name, profession_path(profession), :class => 'button'
+      = link_to profession.name, profession_roles_path(profession), :class => 'button'
 
 = link_to 'Back', root_path, :class => 'button'

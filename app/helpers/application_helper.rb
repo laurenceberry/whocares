@@ -12,8 +12,8 @@ module ApplicationHelper
     controller.controller_name == "professions" && controller.action_name == "index"
   end
 
-  def profession_show_page
-    controller.controller_name == "professions" && controller.action_name == "show"
+  def profession_roles_index_page
+    controller.controller_name == "roles" && controller.action_name == "index"
   end
 
   def role_show_page

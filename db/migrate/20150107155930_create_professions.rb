@@ -3,8 +3,6 @@ class CreateProfessions < ActiveRecord::Migration
     create_table :professions do |t|
       t.string :name
       t.text :description
-
-      t.timestamps
     end
   end
 end

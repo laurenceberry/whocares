@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admins
   resources :professions do
-    resources :roles
+    collection { post :import }
+    resources :roles do
+      collection { post :import }
+    end
   end
 
   root 'pages#index'

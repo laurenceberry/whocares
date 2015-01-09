@@ -1,7 +1,11 @@
 class Profession < ActiveRecord::Base
   has_many :roles
-  validates :description, presence: true
-  validates :description, presence: true,
-                    length: { minimum: 5 }
+  validates :name, presence: true
+
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+      Profession.create! row.to_hash
+    end
+  end
 end
 

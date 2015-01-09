@@ -5,6 +5,11 @@ class RolesController < ApplicationController
     redirect_to profession_path(@profession)
   end
 
+  def index
+    @profession = Profession.find(params[:profession_id])
+    @role = @profession.roles
+  end
+
   def show
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles.find(params[:id])
@@ -33,6 +38,11 @@ class RolesController < ApplicationController
     @role = @profession.roles.find(params[:id])
     @role.destroy
     redirect_to profession_path(@profession)
+  end
+
+  def import
+    Role.import(params[:file])
+    redirect_to profession_roles_path, notice: "Roles updated"
   end
 
   private

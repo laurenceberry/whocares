@@ -40,6 +40,12 @@ class ProfessionsController < ApplicationController
     redirect_to professions_path
   end
 
+  def import
+    Profession.import(params[:file])
+    redirect_to professions_path, notice: "Professions updated"
+  end
+
+
   private
     def profession_params
       params.require(:profession).permit(:name, :description)
