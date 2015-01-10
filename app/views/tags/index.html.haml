@@ -1,6 +1,4 @@
-%h1 Tags
-=render @tags
-%ul
-  - @tags.each do |tag|
-    %li
-      = link_to tag.name, tag_path(tag), :class => 'button'
+%h1 Activities
+
+- tag_cloud(@tags, %w(small-tag medium-tag large-tag)) do |tag, css_class|
+  = link_to tag.name, tag_path(tag), :class => css_class
