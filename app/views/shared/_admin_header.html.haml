@@ -1,6 +1,11 @@
 -if admin_signed_in?
   %header.admin-header
     =link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'button'
+    
+    Download:
+    = link_to "CSV", products_path(format: "csv") |
+    = link_to "Excel", products_path(format: "xls")
+    
     - if professions_index_page
       .upload-form
         =form_tag import_professions_path, multipart: true do
@@ -26,3 +31,5 @@
       = link_to 'Remove role', [@role.profession, @role],         |
           method: :delete,                                       |
           data: { confirm: 'Are you sure?' }, :class => 'button' |
+          
+    
