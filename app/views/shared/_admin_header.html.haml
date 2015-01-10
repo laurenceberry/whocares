@@ -1,16 +1,14 @@
 -if admin_signed_in?
   %header.admin-header
     =link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'button'
-    
-    Download:
-    = link_to "CSV", products_path(format: "csv") |
-    = link_to "Excel", products_path(format: "xls")
-    
+
     - if professions_index_page
       .upload-form
         =form_tag import_professions_path, multipart: true do
           = file_field_tag :file
-          =submit_tag "Upload professions", :class => 'button'
+          = submit_tag "Upload professions", :class => 'button'
+          = link_to "Download CSV", professions_path(format: "csv"), :class => 'button'
+          = link_to "Download Excel", professions_path(format: "xls"), :class => 'button'
 
       = link_to 'Add new profession', new_profession_path, :class => 'button'
 
