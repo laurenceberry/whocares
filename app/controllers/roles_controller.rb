@@ -45,8 +45,12 @@ class RolesController < ApplicationController
     redirect_to profession_roles_path, notice: "Roles updated"
   end
 
+  def role_params
+    params.require(:role).permit(:name, :tag_list) ## Rails 4 strong params usage
+  end
+
   private
     def role_params
-      params.require(:role).permit(:name, :description, :profession_id)
+      params.require(:role).permit(:name, :description, :profession_id, :tag_list)
     end
 end
