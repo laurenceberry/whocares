@@ -5,6 +5,6 @@
 %ul.tags
   - @condition.roles.each do |role|
     %li
-      = link_to role.name, profession_role_path( role, role.profession_id), :class => 'tag'
+      = link_to role.name, profession_role_path(role.profession_id, role), :class => 'tag'
 
 = link_to 'Back', conditions_path, :class => 'button'
