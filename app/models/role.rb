@@ -1,5 +1,6 @@
 class Role < ActiveRecord::Base
   belongs_to :profession
+  has_and_belongs_to_many :conditions
   acts_as_taggable # Alias for acts_as_taggable_on :tags
 
   def self.import(file)
@@ -8,7 +9,7 @@ class Role < ActiveRecord::Base
       Role.create!(row.to_hash) unless Role.find_by(name:  row.to_hash['name'])
     end
   end
-  
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names

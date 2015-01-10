@@ -14,4 +14,14 @@
     = f.text_field :tag_list
 
   %p
+    Check conditions this role is involved with
+  - Condition.all.each do |condition|
+    = check_box_tag "role[condition_ids][]", condition.id, @role.condition_ids.include?(condition.id), id: dom_id(condition)
+    = label_tag dom_id(condition), condition.name
+    = hidden_field_tag "role[condition_ids][]", nil
+
+    %br/
+
+
+  %p
     = f.submit

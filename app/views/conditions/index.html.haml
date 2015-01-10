@@ -1,6 +1,6 @@
 %h1 Listing conditions
 
-%ul
+%ul.tags
   - @conditions.each do |condition|
     %li
       = link_to condition.name, condition_path(condition), :class => 'button'
