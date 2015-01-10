@@ -1,7 +1,7 @@
 @import colours
 
 %button,
-.button, .admin-header input
+.button
   display: inline-block
   background: lighten($blue,5%)
   color: #fff !important
@@ -18,8 +18,17 @@
     background: lighten($blue, 5%)
     text-decoration: none
 
-.admin-header .button
+.admin-header .button, .admin-header input
   background: lighten($green,15%)
+  font-size: 1em
+  z-index: 999
+  min-width: 0
+  &:hover
+    background: lighten($green,20%)
+.admin-header input
+  @extend %button
+  background: lighten($green,15%)
+  font-size: 1em
 
 .tag, a.small-tag, a.medium-tag, a.large-tag
   @extend %button
