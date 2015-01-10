@@ -8,4 +8,13 @@ class Role < ActiveRecord::Base
       Role.create!(row.to_hash) unless Role.find_by(name:  row.to_hash['name'])
     end
   end
+  
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |role|
+        csv << role.attributes.values_at(*column_names)
+      end
+    end
+  end
 end

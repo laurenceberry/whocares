@@ -8,6 +8,11 @@ class RolesController < ApplicationController
   def index
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles
+    respond_to do |format|
+      format.html
+      format.csv { send_data @roles.to_csv }
+      format.xls { send_data @roles.to_csv(col_sep: "\t") }
+    end
   end
 
   def show
