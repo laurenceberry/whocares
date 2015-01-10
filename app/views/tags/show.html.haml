@@ -1,4 +1,6 @@
-%h1= @tag.name
+.intro
+  = link_to 'Jobs', tags_path, :class => 'return button'
+  %h1= @tag.name
 
 %ul
   - @roles.each do |role|

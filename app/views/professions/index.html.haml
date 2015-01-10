@@ -1,8 +1,11 @@
-%h1 Listing professions
+.intro
+  = link_to 'Back', root_path, :class => 'return button'
 
-%ul
+
+  %h1 Professions
+
+%ul.professions
   - @professions.each do |profession|
     %li
       = link_to profession.name, profession_roles_path(profession), :class => 'button'
 
-= link_to 'Back', root_path, :class => 'button'

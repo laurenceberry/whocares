@@ -1,14 +1,14 @@
-%p
-  %strong Name:
-  = @role.name
-%p
-  %strong Description:
-  = @role.description
+.intro
+  = link_to @role.profession.name, profession_roles_path(@profession), :class => 'return button'
+  %h1
+    = @role.name
+.content
+  %p
+    = @role.description
 
-%ul.tags
-  - @role.tags.each do |tag|
-    %li
-      = link_to tag.name, tag_path(tag), :class => 'tag'
+  %ul.tags
+    - @role.tags.each do |tag|
+      %li
+        = link_to tag.name, tag_path(tag), :class => 'tag'
 
 
-= link_to 'Back', profession_roles_path(@profession), :class => 'button'

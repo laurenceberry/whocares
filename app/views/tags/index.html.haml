@@ -1,4 +1,7 @@
-%h1 Activities
+.intro
+  = link_to 'Back', root_path, :class => 'return button'
+
+  %h1 Jobs
 
 - tag_cloud(@tags, %w(small-tag medium-tag large-tag)) do |tag, css_class|
   = link_to tag.name, tag_path(tag), :class => css_class

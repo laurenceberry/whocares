@@ -2,34 +2,33 @@
 
 %button,
 .button, .admin-header input
-  background: #fff
-  color: $blue
+  display: inline-block
+  background: lighten($blue,5%)
+  color: #fff !important
   padding: 10px 10px 8px 10px
-  margin: 0 5px
+  margin: 5px
   border-radius: 3px
   border: none
-  font-size: 1em
+  font-size: 1.5em
   font-family: 'frutiger_reg', arial, sans-serif
   -webkit-font-smoothing: antialiased !important
-
+  min-width: 200px
+  text-align: center
   &:hover
-    background: $light_grey
+    background: lighten($blue, 5%)
     text-decoration: none
 
 .admin-header .button
-  color: $green
+  background: lighten($green,15%)
 
-.tags li
-  display: inline-block
-.tag, .small-tag, .medium-tag, .large-tag
+.tag, a.small-tag, a.medium-tag, a.large-tag
   @extend %button
-  list-style: none
-  background: lighten($blue,15%)
-  color: #fff
-.small-tag
-  padding: 6px 6px 4px 6px
-.medium-tag
-  font-weight: 500
-.large-tag
-  padding: 14px 14px 12px 14px
-  font-weight: 900
+
+.return
+  position: absolute
+  top: 25px
+  left: 25px
+  background: $b10
+  color: #000 !important
+  &:hover
+    background: lighten($b10, 5%)

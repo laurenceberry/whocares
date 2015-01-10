@@ -1,10 +1,12 @@
 .intro
-  %h1.logo
-    Who Cares?
+  .logo
+    %h1
+      Who Cares?
 
-%h2
-  Who does what in the NHS?
+  %h2
+    Who does what in the NHS?
 
-= link_to 'Explore roles by profession', professions_path, :class => 'button'
-= link_to 'Who does what activities', tags_path, :class => 'button'
-= link_to 'Who cares for a condition', conditions_path, :class => 'button'
+.pathways
+  = link_to 'Explore by profession', professions_path, :class => 'button'
+  = link_to 'Who does what jobs', tags_path, :class => 'button'
+  = link_to 'Search by condition', conditions_path, :class => 'button'

@@ -1,8 +1,8 @@
-%h1 Listing conditions
+.intro
+  = link_to 'Back', root_path, :class => 'return button'
+  %h1 Listing conditions
 
 %ul.tags
   - @conditions.each do |condition|
     %li
       = link_to condition.name, condition_path(condition), :class => 'button'
-
-= link_to 'Back', root_path, :class => 'button'
