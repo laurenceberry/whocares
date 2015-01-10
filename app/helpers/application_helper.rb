@@ -20,4 +20,8 @@ module ApplicationHelper
     controller.controller_name == "roles" && controller.action_name == "show"
   end
 
+  def conditions_index_page
+    controller.controller_name == "conditions" && controller.action_name == "index"
+  end
+
 end

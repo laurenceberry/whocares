@@ -1,6 +1,7 @@
 @import colours
 
-.button, .admin-header input, .small-tag, .medium-tag, .large-tag
+%button,
+.button, .admin-header input
   background: #fff
   color: $blue
   padding: 10px 10px 8px 10px
@@ -18,10 +19,17 @@
 .admin-header .button
   color: $green
 
+.tags li
+  display: inline-block
+.tag, .small-tag, .medium-tag, .large-tag
+  @extend %button
+  list-style: none
+  background: lighten($blue,15%)
+  color: #fff
 .small-tag
-  padding: 8px 8px 6px 8px
+  padding: 6px 6px 4px 6px
 .medium-tag
   font-weight: 500
 .large-tag
-  padding: 11px 11px 10px 11px
+  padding: 14px 14px 12px 14px
   font-weight: 900

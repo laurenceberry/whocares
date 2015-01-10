@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       collection { post :import }
     end
   end
+
+  resources :conditions do
+    collection { post :import }
+  end
+
   resources :tags, only: [:index, :show]
 
   root 'pages#index'

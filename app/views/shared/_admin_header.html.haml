@@ -31,5 +31,14 @@
       = link_to 'Remove role', [@role.profession, @role],         |
           method: :delete,                                       |
           data: { confirm: 'Are you sure?' }, :class => 'button' |
-          
-    
+
+
+    - if conditions_index_page
+      .upload-form
+        =form_tag import_conditions_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "Upload conditions", :class => 'button'
+          = link_to "Download CSV", conditions_path(format: "csv"), :class => 'button' |
+          = link_to "Excel", conditions_path(format: "xls"), :class => 'button'
+
+      = link_to 'Add new condition', new_condition_path, :class => 'button'

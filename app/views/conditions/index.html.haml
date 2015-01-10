@@ -1,0 +1,8 @@
+%h1 Listing conditions
+
+%ul
+  - @conditions.each do |condition|
+    %li
+      = link_to condition.name, condition_path(condition), :class => 'button'
+
+= link_to 'Back', root_path, :class => 'button'

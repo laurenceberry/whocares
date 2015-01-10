@@ -4,6 +4,12 @@
 %p
   %strong Description:
   = @role.description
-  = render @role.tags
+
+%ul.tags
+  - @role.tags.each do |tag|
+    %li
+      = link_to tag.name, tag_path(tag), :class => 'tag'
+
+
 
 = link_to 'Back', profession_roles_path(@profession), :class => 'button'

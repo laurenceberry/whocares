@@ -29,7 +29,7 @@ class RolesController < ApplicationController
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles.find(params[:id])
     @role.update_attributes(role_params)
-    redirect_to profession_path(@profession)
+    redirect_to profession_role_path(@profession, @role)
     return
   end
 

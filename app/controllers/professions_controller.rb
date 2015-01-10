@@ -34,7 +34,7 @@ class ProfessionsController < ApplicationController
   def update
     @profession = Profession.find(params[:id])
     @profession.update_attributes(profession_params)
-    redirect_to(profession_path)
+    redirect_to profession_roles_path(@profession, @role)
     return
   end
 
