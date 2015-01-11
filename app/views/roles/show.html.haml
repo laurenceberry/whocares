@@ -5,6 +5,8 @@
 .content
   %p
     = @role.description
+  %p
+    = tweet_button
 
   %ul.tags
     - @role.tags.each do |tag|
