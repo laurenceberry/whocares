@@ -6,5 +6,7 @@
   - @profession.roles.each do |role|
     %li
       = link_to role.name, profession_role_path(@profession, role), :class => 'button'
+      
+= tweet_button
 
 = link_to 'Back', professions_path, :class => 'button'

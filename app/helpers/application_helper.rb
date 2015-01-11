@@ -23,5 +23,8 @@ module ApplicationHelper
   def conditions_index_page
     controller.controller_name == "conditions" && controller.action_name == "index"
   end
+  
+  def TweetButton
+  end
 
 end

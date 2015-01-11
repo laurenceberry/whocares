@@ -43,3 +43,4 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'rails_12factor'
 gem 'acts-as-taggable-on', '~> 3.4.3'
+gem "tweet-button"
