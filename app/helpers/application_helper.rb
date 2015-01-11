@@ -1,7 +1,7 @@
 module ApplicationHelper
   include TweetButton
   
-  TweetButton.default_tweet_button_options = {:via => "whocares"}
+  TweetButton.default_tweet_button_options = {:via => "whocares", :count => "horizontal", :text => "Check out this role on @whocaresapp, your guide to who does what in the #NHS:"}
   
   def body_tags
     klasses = ''
