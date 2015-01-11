@@ -1,4 +1,8 @@
 module ApplicationHelper
+  include TweetButton
+  
+  TweetButton.default_tweet_button_options = {:via => "whocares"}
+  
   def body_tags
     klasses = ''
     klasses << " #{controller.controller_name}" unless
@@ -23,8 +27,5 @@ module ApplicationHelper
   def conditions_index_page
     controller.controller_name == "conditions" && controller.action_name == "index"
   end
-  
-  def TweetButton
-  end
-
+ 
 end
