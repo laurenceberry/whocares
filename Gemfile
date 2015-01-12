@@ -40,7 +40,17 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
 gem 'unicorn'
 gem 'rails_12factor'
 gem 'acts-as-taggable-on', '~> 3.4.3'
 gem "tweet-button"
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+  gem 'rspec', '~> 3.1.0'
+  gem 'capybara'
+  gem "launchy", "~> 2.1.2"
+end
