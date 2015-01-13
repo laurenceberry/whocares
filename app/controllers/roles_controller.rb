@@ -1,5 +1,8 @@
 class RolesController < ApplicationController
+  load_and_authorize_resource
+
   def create
+    before_filter :authenticate_admin!, :except => [:show, :index]
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles.create(role_params)
     redirect_to profession_path(@profession)

@@ -6,7 +6,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{body_tags}
-    = render 'shared/admin_header'
+    - if current_page?(root_path) && !signed_in?
+      = link_to "Contributor sign in", new_contributor_session_path, :class => 'contributor_sign_in button'
+    = render 'shared/control_panel'
     = yield
     / -if Rails.env.development?
     /   #params

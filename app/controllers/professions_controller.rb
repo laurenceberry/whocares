@@ -1,4 +1,5 @@
 class ProfessionsController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @professions = Profession.all
