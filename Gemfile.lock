@@ -30,6 +30,7 @@ GEM
     acts-as-taggable-on (3.4.3)
       activerecord (>= 3.2, < 5)
     addressable (2.3.6)
+    analytics-ruby (2.0.12)
     arel (5.0.1.20140414130214)
     bcrypt-ruby (3.1.2)
     builder (3.2.2)
@@ -182,6 +183,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4.3)
+  analytics-ruby (~> 2.0.0)
   cancan
   capybara
   coffee-rails (~> 4.0.0)

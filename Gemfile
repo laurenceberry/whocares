@@ -48,6 +48,7 @@ gem 'cancan'
 
 gem 'acts-as-taggable-on', '~> 3.4.3'
 gem "tweet-button"
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 
 group :test do
   gem 'cucumber-rails', :require => false
