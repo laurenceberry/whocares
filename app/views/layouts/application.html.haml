@@ -5,6 +5,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = meta name="google-site-verification" content="BmuPl_6pv4-d4XrVPJCOSMNvGHRXZ7NuZZ6q5DS1AzM"
   %body{body_tags}
     - if current_page?(root_path) && !signed_in?
       = link_to "Sign In", new_contributor_session_path, :class => 'contributor_sign_in button'
