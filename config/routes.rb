@@ -17,6 +17,6 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   get "about" => "pages#about" #creates about path
-  get "about" => "pages#contact" #creates about path
+  get "contact" => "pages#contact" #creates about path
 
 end
