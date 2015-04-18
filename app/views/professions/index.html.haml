@@ -1,11 +1,11 @@
 .intro
-  = link_to 'Back', root_path, :class => 'return button'
-
-
   %h1 Professions
 
 %ul.professions
   - @professions.each do |profession|
-    %li
-      = link_to profession.name, profession_roles_path(profession), :class => 'button'
-
+    %a{:href => profession_roles_path(profession)}
+      %li.profession
+        .head
+          %h3=profession.name
+        .description
+          %p=truncate(profession.description, length: 140)

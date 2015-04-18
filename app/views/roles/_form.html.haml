@@ -9,12 +9,7 @@
     = f.text_area :description
 
   %p
-    = f.label :tag_list
-    %br/
-    = f.text_field :tag_list
-
-  %p
-    Check conditions this role is involved with
+    Check conditions this role is involved in
   - Condition.all.each do |condition|
     = check_box_tag "role[condition_ids][]", condition.id, @role.condition_ids.include?(condition.id), id: dom_id(condition)
     = label_tag dom_id(condition), condition.name
@@ -22,6 +17,14 @@
 
     %br/
 
+  %p
+    Check jobs this role is involved in
+  - Job.all.each do |job|
+    = check_box_tag "role[job_ids][]", job.id, @role.job_ids.include?(job.id), id: dom_id(job)
+    = label_tag dom_id(job), job.title
+    = hidden_field_tag "role[job_ids][]", nil
+
+    %br/
 
   %p
     = f.submit

@@ -27,12 +27,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.4.3)
-      activerecord (>= 3.2, < 5)
     addressable (2.3.6)
     analytics-ruby (2.0.12)
     arel (5.0.1.20140414130214)
     bcrypt-ruby (3.1.2)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     cancan (1.6.10)
     capybara (2.4.4)
@@ -96,6 +97,9 @@ GEM
     minitest (5.5.0)
     multi_json (1.10.1)
     multi_test (0.1.1)
+    neat (1.5.0)
+      bourbon (>= 2.1)
+      sass (>= 3.2)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     orm_adapter (0.4.0)
@@ -184,8 +188,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts-as-taggable-on (~> 3.4.3)
   analytics-ruby (~> 2.0.0)
+  bourbon (~> 3.2.3)
   cancan
   capybara
   coffee-rails (~> 4.0.0)
@@ -196,6 +200,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy (~> 2.1.2)
+  neat
   pg
   rails (= 4.1.8)
   rails_12factor

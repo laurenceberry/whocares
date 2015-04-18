@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :contributors
+  devise_for :contributors, :path => '', :path_names => {:sign_in => 'sign_in', :sign_out => 'sign_out'}
   devise_for :admins, :path => '', :path_names => {:sign_in => 'sign_in', :sign_out => 'sign_out'}
 
   resources :professions do
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   resources :conditions do
     collection { post :import }
+  end
+
+  resources :jobs do
   end
 
   resources :tags, only: [:index, :show]

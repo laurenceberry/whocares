@@ -1,0 +1,44 @@
+
+// Prefix experimental props w/ browser prefixes
+@mixin prefixer ($property, $value, $prefixes)
+  @each $prefix in $prefixes
+    @if $prefix == webkit
+      -webkit-#{$property}: $value
+
+    @else if $prefix == moz
+      -moz-#{$property}: $value
+
+    @else if $prefix == ms
+      -ms-#{$property}: $value
+
+    @else if $prefix == o
+      -o-#{$property}: $value
+
+    @else if $prefix == spec
+      #{$property}: $value
+
+    @else
+      @warn "Unrecognized prefix: #{$prefix}"
+
+=breakpoint($point)
+  @if $point == large
+    @media (min-width: 70em)
+      @content
+  @else if $point == laptop
+    @media (min-width: 64em)
+      @content
+  @else if $point == medium
+    @media (min-width: 50em)
+      @content
+  @else if $point == phablet
+    @media (min-width: 37.5em)
+      @content
+  @else if $point == small
+    @media (min-width: 37.5em)
+      @content
+
+=omega-reset($nth)
+  &:nth-child(#{$nth})
+    margin-right: flex-gutter($grid-columns, $gutter)
+  &:nth-child(#{$nth}+1)
+    clear: none

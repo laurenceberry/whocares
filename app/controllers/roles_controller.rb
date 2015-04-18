@@ -11,6 +11,7 @@ class RolesController < ApplicationController
   def index
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles
+
     respond_to do |format|
       format.html
       format.csv { send_data @roles.to_csv }
@@ -59,6 +60,6 @@ class RolesController < ApplicationController
 
   private
     def role_params
-      params.require(:role).permit(:name, :description, :profession_id, :tag_list, :condition_ids => [])
+      params.require(:role).permit(:name, :description, :profession_id, :tag_list, :condition_ids => [], :job_ids => [])
     end
 end

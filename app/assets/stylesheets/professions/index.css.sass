@@ -1,0 +1,44 @@
+.professions#index .main, .roles#index .main
+  ul.professions, ul.roles
+    a
+      +span-columns(12)
+      +omega(0)
+
+      +breakpoint(medium)
+        +span-columns(4)
+        +omega(3n)
+
+      li.role
+        min-height: 200px
+      li.profession
+        min-height: 160px
+
+      li.role, li.profession
+        width: 100%
+        margin-bottom: 25px
+        background-color: $white
+        border: solid 1px $b10
+        &:hover
+          +prefixer(transition, all .2s, moz ms o webkit spec)
+          @include prefixer(box-shadow, 0px 0px 10px 0px lighten($black, 60%), moz ms o webkit spec)
+      .head
+        background-color: $secondary
+        width: 100%
+        padding: 5px 15px
+        color: $white
+      .description
+      p
+        font-size: 1em
+        margin: 15px
+        color: $b80
+      .jobs
+        margin: 0 10px 10px 10px
+        width: 100%
+        float: left
+        overflow: hidden
+        .job
+          padding: 4px 5px 3px 5px
+          border-radius: 4px
+          margin: 0 5px
+          border: 1px solid #DAE3E5
+          background-color: #F4F7F7

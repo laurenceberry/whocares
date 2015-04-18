@@ -1,7 +1,7 @@
 class Role < ActiveRecord::Base
   belongs_to :profession
   has_and_belongs_to_many :conditions
-  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  has_and_belongs_to_many :jobs
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|

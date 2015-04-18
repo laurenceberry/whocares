@@ -1,0 +1,7 @@
+.intro
+  %h1 jobs
+
+%ul.tags
+  - @jobs.each do |job|
+    %li
+      = link_to job.title, job_path(job), :class => 'button'

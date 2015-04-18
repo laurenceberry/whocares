@@ -46,10 +46,11 @@ gem 'rails_12factor'
 
 gem 'cancan'
 
-gem 'acts-as-taggable-on', '~> 3.4.3'
 gem "tweet-button"
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'sitemap_generator'
+gem 'bourbon', '~> 3.2.3'
+gem 'neat'
 
 group :test do
   gem 'cucumber-rails', :require => false

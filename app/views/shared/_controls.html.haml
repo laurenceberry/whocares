@@ -1,0 +1,44 @@
+.controls
+  - if professions_index_page && current_admin
+    .upload-form
+      =form_tag import_professions_path, multipart: true do
+        = file_field_tag :file
+        = submit_tag "Upload professions"
+        = link_to "Download CSV", professions_path(format: "csv") |
+        = link_to "Excel", professions_path(format: "xls")
+
+    = link_to 'Add new profession', new_profession_path
+
+  - if profession_roles_index_page && current_admin
+    .upload-form
+      =form_tag import_profession_roles_path, multipart: true do
+        = file_field_tag :file
+        = submit_tag "Upload roles"
+        = link_to "Download CSV", profession_roles_path(format: "csv") |
+        = link_to "Excel", profession_roles_path(format: "xls")
+
+    = link_to 'Add new role', new_profession_role_path(@profession)
+    = link_to 'Edit profession', edit_profession_path(@profession)
+    = link_to 'Destroy', profession_path(@profession),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' }, :class => 'button'
+
+  - if role_show_page
+    = link_to 'Edit role', edit_profession_role_path(@profession,@role)
+    - if current_admin
+      = link_to 'Remove role', [@role.profession, @role],         |
+          method: :delete,                                       |
+          data: { confirm: 'Are you sure?' }, :class => 'button' |
+
+  - if current_page?(jobs_path)
+    = link_to 'Add new job', new_job_path
+
+
+  - if conditions_index_page
+    - if current_admin
+      .upload-form
+        =form_tag import_conditions_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "Upload conditions"
+          = link_to "Download CSV", conditions_path(format: "csv") |
+          = link_to "Excel", conditions_path(format: "xls")

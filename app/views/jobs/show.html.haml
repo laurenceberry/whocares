@@ -1,0 +1,7 @@
+.intro
+  %h1= @job.title
+
+%ul.tags
+  - @job.roles.each do |role|
+    %li
+      = link_to role.name, profession_role_path(role.profession_id, role), :class => 'tag'
