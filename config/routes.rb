@@ -13,8 +13,7 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  resources :jobs do
-  end
+  resources :jobs
 
   resources :tags, only: [:index, :show]
 

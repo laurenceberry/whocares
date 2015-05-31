@@ -11,9 +11,9 @@
         .description
           %p=truncate(role.description, length: 140)
         %ul.jobs
-          - role.tags.each do |tag|
+          - role.jobs.each do |job|
             %li.job
-              = tag.name
+              = job.title
 
 
 

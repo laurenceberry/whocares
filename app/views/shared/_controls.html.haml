@@ -30,9 +30,6 @@
           method: :delete,                                       |
           data: { confirm: 'Are you sure?' }, :class => 'button' |
 
-  - if current_page?(jobs_path)
-    = link_to 'Add new job', new_job_path
-
 
   - if conditions_index_page
     - if current_admin
@@ -42,3 +39,9 @@
           = submit_tag "Upload conditions"
           = link_to "Download CSV", conditions_path(format: "csv") |
           = link_to "Excel", conditions_path(format: "xls")
+
+
+  - if current_page?(jobs_path)
+    = link_to 'Add new job', new_job_path
+
+  //= link_to 'Edit job', edit_job_path(@job)

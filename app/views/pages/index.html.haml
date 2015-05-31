@@ -1,8 +1,31 @@
-.intro
-  %h1
-    Who does what in the NHS
 
-.pathways
+%section.intro
+  %h1
+    Clear explanations about people who care in the NHS, what they do, and how they fit into the system.
+
+%section.professions
+  %h2
+    Simply explore professions within the NHS
   = link_to 'Explore by profession', professions_path, :class => 'button'
+
+%section.conditions
+  %h2
+    See who is involved in the treatment of diseases and illnesses
   = link_to 'Who does what job', jobs_path, :class => 'button'
+
+%section.jobs
+  %h2
+    Browse the jobs people do
   = link_to 'Search by condition', conditions_path, :class => 'button'
+
+%section.contribute
+  %h2
+    Curated by professionals
+  = link_to 'Search by condition', conditions_path, :class => 'button'
+
+/ .cta
+/   = link_to 'Explore by profession', professions_path, :class => 'button'
+/   = link_to 'Who does what job', jobs_path, :class => 'button'
+/   = link_to 'Search by condition', conditions_path, :class => 'button'
+
+
