@@ -1,28 +1,30 @@
-== README
+== About Who Cares
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Who Cares is a directory of clear and simple explanations about the people caring for you, what they do in their roles, and how they fit into the healthcare system.
+  
+== Our Vision
 
-Things you may want to cover:
+Who Cares? offers patients within the NHS an easy, safe way to find out which professionals care for them and what their role is.
 
-* Ruby version
+Patients who do not understand who cares for them or what they do can use Who Cares? to search professionals who are involved with their care, unlike NHS Choices which only offers information on treatments and accessing help.
 
-* System dependencies
+== What is the problem?
+ 
+* Medical job titles are often indecipherable to people
+* It is sometimes unclear why you have been referred to a particular person
+* People often don't know how someone can best help them
+* People don't know how a healthcare professional looking after them fits into the healthcare system
 
-* Configuration
+== What is the solution?
 
-* Database creation
+* A directory of healthcare job titles
+* Clear and simple explanations about individual healthcare jobs, what they do and how they can help you
+* Signposts to related healthcare professionals or specialists you can contact in your area
+  
+== Who is behind this?
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Laurence Berry and Ben Matthews
+  
+== Where can I send feedback?
+ 
+Email us.
