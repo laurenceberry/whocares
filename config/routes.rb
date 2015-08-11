@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   resources :tags, only: [:index, :show]
 
   root 'pages#index'
-  get "about" => "pages#about" #creates about path
-  get "contact" => "pages#contact" #creates about path
+  get "about" => "pages#about"
+  get "contact" => "pages#contact"
+  get "search_results" => "pages#search_results"
 
 end

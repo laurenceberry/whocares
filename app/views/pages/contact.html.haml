@@ -1,0 +1,30 @@
+.intro
+  %h1 Get in touch to become a contributor
+  %p
+    We are looking for contributers to help curate Whocares? and improve the information about roles.
+    %br
+    Leave your email adsress and we will be in touch within a few days.
+  %br
+
+
+/ Begin MailChimp Signup Form
+
+#mc_embed_signup
+  %form#mc-embedded-subscribe-form.validate{:action => "//laurenceberry.us3.list-manage.com/subscribe/post?u=333e5aa54a7af30f80544f19b&id=3a55f8a40d", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+    #mc_embed_signup_scroll
+      .mc-field-group
+        %label{:for => "mce-EMAIL"} Email Address
+        .clear
+        %input#mce-EMAIL.required.email{:name => "EMAIL", :type => "email", :value => ""}/
+        %input#mc-embedded-subscribe.button{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
+
+      #mce-responses.clear
+        #mce-error-response.response{:style => "display:none"}
+        #mce-success-response.response{:style => "display:none"}
+      / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+      %div{:style => "position: absolute; left: -5000px;"}
+        %input{:name => "b_333e5aa54a7af30f80544f19b_3a55f8a40d", :tabindex => "-1", :type => "text", :value => ""}/
+%script{:src => "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js", :type => "text/javascript"}
+:javascript
+  (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+/ End mc_embed_signup

@@ -3,6 +3,11 @@ class Role < ActiveRecord::Base
   has_and_belongs_to_many :conditions
   has_and_belongs_to_many :jobs
 
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+    where("description LIKE ?", "%#{search}%")
+  end
+
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
       roles = find_by_name(row["name"]) || new

@@ -8,6 +8,7 @@
   %body{body_tags}
     = render 'shared/header'
     .main
+
       = yield
 
     / -if Rails.env.development?

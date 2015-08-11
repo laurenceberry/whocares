@@ -1,17 +1,30 @@
 
 %section.intro
   %h1
-    Clear explanations about people who care in the NHS, what they do, and how they fit into the system.
+    Clear explanations about the people who care in the NHS, what they do, and how they fit into the system.
+
+
+%section.search
+
+  %h2
+    Search for a specific role
+
+  #search
+    = form_tag(search_results_path, :method => "get") do
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", :name => nil, :class => 'button'
+  %br
+  %br
 
 %section.professions
   %h2
-    Simply explore professions within the NHS
+    Explore professions within the NHS
   = link_to 'Explore by profession', professions_path, :class => 'button'
 
-%section.conditions
-  %h2
-    See who is involved in the treatment of diseases and illnesses
-  = link_to 'Who does what job', jobs_path, :class => 'button'
+/ %section.conditions
+/   %h2
+/     See who is involved in the treatment of diseases and illnesses
+/   = link_to 'Who does what job', jobs_path, :class => 'button'
 
 %section.jobs
   %h2
@@ -21,7 +34,12 @@
 %section.contribute
   %h2
     Curated by professionals
-  = link_to 'Search by condition', conditions_path, :class => 'button'
+  %h3
+    We are looking for contributers to help curate
+    %em Whocares?
+    and improve the information about roles
+
+  = link_to 'Get in touch', contact_path, :class => 'button'
 
 / .cta
 /   = link_to 'Explore by profession', professions_path, :class => 'button'

@@ -9,6 +9,7 @@ class RolesController < ApplicationController
   end
 
   def index
+
     @profession = Profession.find(params[:profession_id])
     @role = @profession.roles
 
