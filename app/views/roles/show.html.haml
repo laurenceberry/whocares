@@ -10,7 +10,7 @@
       Improve the information about this role #{link_to('get in touch', contact_path)}
   %br
   %p.social-container
-    %a.twitter.prettySocial.button{"data-description" => "#{truncate(@role.description, length: 95)}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Share on Twitter
+    %a.twitter.prettySocial.button{"data-description" => "#{role_description}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Share on Twitter
 
   %br
   %hr

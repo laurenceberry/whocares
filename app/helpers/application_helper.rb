@@ -3,6 +3,14 @@ module ApplicationHelper
 
   TweetButton.default_tweet_button_options = {:via => "whocaresapp", :count => "horizontal", :text => ""}
 
+  def role_description
+    if @role.description.blank?
+      "Can you tell us about #{@role.name + "s"}"
+    else
+      truncate(@role.description, length: 95)
+    end
+  end
+
   def body_tags
     klasses = ''
     klasses << " #{controller.controller_name}" unless
