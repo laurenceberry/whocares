@@ -14,9 +14,9 @@
               Improve the information about this role
           -else
             %p=truncate(role.description, length: 140)
-        %ul.jobs
+        %ul.jobs-card
           - role.jobs.each do |job|
-            %li.job
+            %li.job-tag
               = job.title
 
 
