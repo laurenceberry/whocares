@@ -16,7 +16,7 @@
   %hr
   %ul.jobs
     - @role.jobs.each do |job|
-      %li.job
+      %li.job-tag
         = link_to job.title, job_path(job), :class => 'tag'
 
 

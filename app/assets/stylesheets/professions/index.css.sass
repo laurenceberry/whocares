@@ -1,4 +1,4 @@
-ul.professions, ul.roles
+ul.professions, ul.roles, ul.jobs-list
   a
     +span-columns(12)
     +omega(0)
@@ -6,7 +6,7 @@ ul.professions, ul.roles
       +span-columns(4)
       +omega(3n)
 
-    li.role, li.profession
+    li.role, li.profession, li.job
       width: 100%
       margin-bottom: 25px
       background-color: $white
@@ -29,10 +29,10 @@ ul.professions, ul.roles
       color: $b80
 
 
-  .jobs
+  .jobs-card
     padding-left: 15px
 
-.job
+li.job-tag
   padding: 4px 5px 0px 5px
   border-radius: 4px
   margin: 5px
