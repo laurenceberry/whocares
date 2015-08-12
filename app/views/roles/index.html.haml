@@ -9,7 +9,11 @@
         .head
           %h3=role.name
         .description
-          %p=truncate(role.description, length: 140)
+          -if role.description.blank?
+            %p
+              Improve the information about this role
+          -else
+            %p=truncate(role.description, length: 140)
         %ul.jobs
           - role.jobs.each do |job|
             %li.job
