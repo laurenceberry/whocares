@@ -4,8 +4,9 @@ class Role < ActiveRecord::Base
   has_and_belongs_to_many :jobs
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%")
-    where("description LIKE ?", "%#{search}%")
+
+    where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%")
+
   end
 
   def self.import(file)
