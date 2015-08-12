@@ -1,7 +1,7 @@
 module ApplicationHelper
   include TweetButton
 
-  TweetButton.default_tweet_button_options = {:via => "whocaresapp", :count => "horizontal", :text => "Do you know this role on @whocaresapp, your guide to who does what in the #NHS:"}
+  TweetButton.default_tweet_button_options = {:via => "whocaresapp", :count => "horizontal", :text => ""}
 
   def body_tags
     klasses = ''
@@ -34,7 +34,7 @@ module ApplicationHelper
 
   def pages_links
     content_tag(:li) do
-      content_tag(:a, 'About', :href => about_path)
+      #content_tag(:a, 'About', :href => about_path)
     end
   end
 

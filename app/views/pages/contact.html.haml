@@ -1,11 +1,17 @@
 .intro
-  %h1 Get in touch to become a contributor
-  %p
-    We are looking for contributers to help curate Whocares? and improve the information about roles.
-    %br
-    Leave your email adsress and we will be in touch within a few days.
-  %br
+  %h1 Get in touch
 
+  %p
+    If you are interested in becoming a contributor or want to improve our information email
+    =mail_to('berry.laur@gmail.com')
+    or tweet
+    =link_to('@Laurence_Berry', 'https://twitter.com/Laurence_Berry')
+  %br
+  %h2 Stay up-to-date
+  %p
+    %em Whocares?
+    is currently in public alpha. Leave your email below, and we'll notify you when we make helpful updates. We'll never send you spam.
+  %br
 
 / Begin MailChimp Signup Form
 
@@ -13,8 +19,6 @@
   %form#mc-embedded-subscribe-form.validate{:action => "//laurenceberry.us3.list-manage.com/subscribe/post?u=333e5aa54a7af30f80544f19b&id=3a55f8a40d", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
     #mc_embed_signup_scroll
       .mc-field-group
-        %label{:for => "mce-EMAIL"} Email Address
-        .clear
         %input#mce-EMAIL.required.email{:name => "EMAIL", :type => "email", :value => ""}/
         %input#mc-embedded-subscribe.button{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
 

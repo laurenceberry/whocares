@@ -1,6 +1,6 @@
 .intro
   - if @roles.present?
-    %h1 Results for "#{params[:search]}"
+    %h1 #{pluralize( @roles.count, 'result' )} for "#{params[:search]}"
 
 
 - if @roles.present?
@@ -24,4 +24,4 @@
                 = job.title
 - else
   %p
-    There are no roles containing #{params[:search]}.
+    We couldn't find any NHS roles containing "#{params[:search]}".
