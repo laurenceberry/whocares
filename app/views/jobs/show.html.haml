@@ -1,7 +1,20 @@
 .intro
   %h1= @job.title
 
-%ul.tags
+%ul.roles
   - @job.roles.each do |role|
-    %li
-      = link_to role.name, profession_role_path(role.profession_id, role), :class => 'tag'
+    %a{:href => profession_role_path(role.profession_id, role)}
+      %li.role
+        .head
+          %h3=role.name
+        .description
+          -if role.description.blank?
+            %p
+              Improve the information about this role
+          -else
+            %p=truncate(role.description, length: 140)
+
+        %ul.jobs
+          - role.jobs.each do |job|
+            %li.job
+              = job.title

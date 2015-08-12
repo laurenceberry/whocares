@@ -14,6 +14,7 @@
   -webkit-font-smoothing: antialiased !important
   min-width: 200px
   text-align: center
+  -webkit-appearance: none
   &:hover
     background: $secondary
     text-decoration: none
@@ -30,9 +31,6 @@
   @extend %button
   background: lighten($green,15%)
   font-size: 1em
-
-.tag, a.small-tag, a.medium-tag, a.large-tag
-  @extend %button
 
 .return, .contributor_sign_in
   position: absolute
