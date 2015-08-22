@@ -1,10 +1,7 @@
 .intro
-
   %h1= @condition.name
-  //%p= @condition.description
 
-  //%h2 Roles involved
-%ul.tags
+%ul.roles
   - @condition.roles.each do |role|
-    %li
-      = link_to role.name, profession_role_path(role.profession_id, role), :class => 'tag'
+    %a{:href => profession_role_path(role.profession_id, role)}
+      = render partial: 'roles/role', :locals => { :role => role }

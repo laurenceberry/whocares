@@ -5,18 +5,6 @@
 %ul.roles
   - @profession.roles.each do |role|
     %a{:href => profession_role_path(@profession, role)}
-      %li.role
-        .head
-          %h3=role.name
-        .description
-          -if role.description.blank?
-            %p
-              Improve the information about this role
-          -else
-            %p=truncate(role.description, length: 140)
-        %ul.jobs-card
-          - role.jobs.each do |job|
-            %li.job-tag
-              = job.title
+      = render partial: 'roles/role', :locals => { :role => role }
 
 

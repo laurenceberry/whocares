@@ -8,13 +8,13 @@
       %ul
         - @job.errors.full_messages.each do |msg|
           %li= msg
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-  %p
-    = f.submit
+
+  = f.label :title
+  %br/
+  = f.text_field :title
+
+  = f.label :description
+  %br/
+  = f.text_area :description
+
+  = f.submit

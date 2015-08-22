@@ -1,13 +1,9 @@
 .intro
-  %h1
-    = @role.name
+  %h1= @role.name
 
-.content
-  %p
-    -if @role.description?
-      = @role.description
-    -else
-      Improve the information about this role #{link_to('get in touch', contact_path)}
+%section.content
+  %p=data_exists?(@role.description)
+
   %br
   %p.social-container
     %a.twitter.prettySocial.button{"data-description" => "#{role_description}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Share on Twitter

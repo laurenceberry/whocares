@@ -6,12 +6,10 @@
   h1
     max-width: 800px
     margin: auto
-  h1, h2
-    text-align: center
 
   #search
-    max-width: 600px
     width: 100%
+    max-width: 600px
     margin: auto
     input
       width: 100%
@@ -22,6 +20,7 @@
       -webkit-appearance: none
       +breakpoint(medium)
         width: 65%
+
     input.button
       width: 100%
       border: none
@@ -37,42 +36,32 @@
     width: 100%
     padding: 75px 25px
     text-align: center
+    background-color: darken($secondary, 5%)
     .button
       background-color: $b05
-      color: #000
+      color: darken($secondary, 15%)
+    h1, h2, p
+      text-align: center
+    p
+      margin-bottom: 20px
 
-  .intro
+  section:nth-child(odd)
+    background-color: $secondary
+
+  section:first-child
     background-color: $b05
 
+  section.intro
+    background-color: $b05
 
-  .search
-    background-color: darken($secondary, 2%)
+  section.search
     padding: 15px 25px 50px 25px
     display: inline-block
-
     input.button
       background-color: $b05 !important
       color: darken($secondary, 15%) !important
 
-  .professions
-    background-color: $secondary
-    .button
-      color: darken($secondary, 15%)
-
-  .conditions
-    background-color: $primary
-
-  .jobs
-    background-color: darken($secondary, 2%)
-    .button
-      color: darken($secondary, 15%)
-
-  .contribute
+  section.contribute
     background-color: $primary
     .button
       color: darken($primary, 15%)
-
-
-  .cta
-    background-color: $green
-    padding: 50px 25px

@@ -5,6 +5,13 @@ body
   font-size: 14px
   +breakpoint(medium)
     font-size: 16px
+
+h1, h2, p, a
+  max-width: 600px
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+
 h1
   font-size: 1.8em
   margin: 0 auto 25px auto
@@ -12,13 +19,10 @@ h1
 
 h2
   font-size: 1.6em
-  text-align: center
 
 p, a
   font-size: 1em
-  text-align: left
-  max-width: 600px
-  margin: auto
+
 a
   &:link
     text-decoration: none
@@ -26,12 +30,6 @@ a
   &:visited
     color: $b90
 
-
-a.twitter-share-button
-  color: #000
-
-h1, h2, p
-  max-width: 500px
-  text-align: left
-  margin-left: auto
-  margin-right: auto
+.pages, .roles#show
+  h1, p
+    text-align: left

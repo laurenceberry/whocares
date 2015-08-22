@@ -1,0 +1,9 @@
+%li.role
+  .head
+    %h3=role.name
+  .description
+    %p=data_exists?(role.description).truncate(140)
+
+  %ul.jobs-card
+    - role.jobs.each do |job|
+      %li.job-tag= job.title

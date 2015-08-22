@@ -3,9 +3,17 @@ module ApplicationHelper
 
   TweetButton.default_tweet_button_options = {:via => "whocaresapp", :count => "horizontal", :text => ""}
 
+  def data_exists?(data)
+    if data
+     data
+    else
+      "Help improve the information about this role."
+    end
+  end
+
   def role_description
     if @role.description.blank?
-      "Can you tell us about #{@role.name + "s"}"
+      "Can you tell us about #{@role.name + "s"}?"
     else
       truncate(@role.description, length: 95)
     end

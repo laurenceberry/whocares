@@ -3,47 +3,23 @@
   %h1
     Clear descriptions of the people who care in the NHS, what they do, and how they fit into the system.
 
-
 %section.search
-
-  %h2
-    Search for a role
-
-  #search
-    = form_tag(search_results_path, :method => "get") do
-      = text_field_tag :search, params[:search]
-      = submit_tag "Search", :name => nil, :class => 'button'
-  %br
-  %br
+  %h2 Search for a role
+  = form_tag(search_results_path, :method => "get", :id => 'search') do
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil, :class => 'button'
 
 %section.professions
-  %h2
-    Explore professions within the NHS
+  %h2 Explore professions within the NHS
   = link_to 'Explore by profession', professions_path, :class => 'button'
 
-/ %section.conditions
-/   %h2
-/     See who is involved in the treatment of diseases and illnesses
-/   = link_to 'Search by condition', conditions_path, :class => 'button'
-
 %section.jobs
-  %h2
-    Browse the jobs people do
+  %h2 Browse the jobs people do
   = link_to 'Who does what job', jobs_path, :class => 'button'
 
 %section.contribute
-  %h2
-    Curated by professionals
-  %h3
-    We are looking for contributers to help curate
-    %em Whocares?
-    and improve the information about roles
-
-  = link_to 'Get in touch', contact_path, :class => 'button'
-
-/ .cta
-/   = link_to 'Explore by profession', professions_path, :class => 'button'
-/   = link_to 'Who does what job', jobs_path, :class => 'button'
-/   = link_to 'Search by condition', conditions_path, :class => 'button'
+  %h2 Curated by professionals
+  %p Roles curated by professionals are on their way, join our mailing list to stay up to date.
+  = link_to 'Stay up-to-date', contact_path, :class => 'button'
 
 
