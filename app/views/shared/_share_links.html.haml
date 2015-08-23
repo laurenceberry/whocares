@@ -22,7 +22,7 @@
     Share on Facebook
   %a.twitter.prettySocial.button{"data-description" => "#{role_description}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Tweet this
 
-  %a.mail.button{:href => "mailto:?subject=Clear descriptions of the people who care in the NHS, what they do, and how they fit into the system. #{url_for(:only_path => false)}&redirect_uri=#{url_for(:only_path => false)}", :title => "Share by Email"}
+  %a.mail.button{:href => "mailto:?subject=#{role_name} #{url_for(:only_path => false)}&redirect_uri=#{url_for(:only_path => false)}", :title => "Share by Email"}
     Email to a friend
 
   %script.source{:type => "text/javascript"}
