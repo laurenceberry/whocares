@@ -54,7 +54,7 @@ module ApplicationHelper
 
   def pages_links
     content_tag(:li) do
-      #content_tag(:a, 'About', :href => about_path)
+      content_tag(:a, 'Contact', :href => contact_path)
     end
   end
 
