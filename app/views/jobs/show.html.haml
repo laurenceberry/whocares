@@ -1,5 +1,6 @@
 .intro
   %h1= @job.title
+  %p= @job.description
 
 %ul.roles
   - @job.roles.each do |role|
