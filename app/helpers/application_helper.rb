@@ -11,6 +11,18 @@ module ApplicationHelper
     end
   end
 
+  def role_name
+    if @role
+      if @role.description.blank?
+        "Do you know about what #{@role.name + "s"} do?"
+      else
+        "Take a look at  #{@role.name} on the Who Cares app"
+      end
+    else
+      "The Who Cares app, the people who care in the NHS"
+    end
+  end
+
   def role_description
     if @role
       if @role.description.blank?
