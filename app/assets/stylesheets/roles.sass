@@ -6,14 +6,16 @@
 
 
 
-ul.jobs-list, ul.professions, ul.roles
+ul.professions, ul.roles
   a
     +span-columns(12)
     +omega(0)
     +breakpoint(medium)
-      +span-columns(3)
-      +omega(4n)
+      +span-columns(4)
+      +omega(3n)
 
+ul.jobs-list, ul.professions, ul.roles
+  a
     li.role, li.profession, li.job
       width: 100%
       margin-bottom: 25px
@@ -33,16 +35,18 @@ ul.jobs-list, ul.professions, ul.roles
       p
         text-align: left
 
-ul.professions, ul.roles
-  a
-    +span-columns(12)
-    +omega(0)
-    +breakpoint(medium)
-      +span-columns(4)
-      +omega(3n)
 
 p.suggestion
   clear: both
   margin: 25px auto 0 auto
 section.suggestion
   padding-top: 0
+
+.jobs#index
+  ul.jobs-list
+    a
+      +span-columns(12)
+      +omega(0)
+      +breakpoint(medium)
+        +span-columns(3)
+        +omega(4n)
