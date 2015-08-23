@@ -1,0 +1,30 @@
+:javascript
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1475959526061505',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+%section.share-links
+
+  %a.facebook.button{:href => "https://www.facebook.com/dialog/share?app_id=1475959526061505&display=popup&href=#{url_for(:only_path => false)}&redirect_uri=#{url_for(:only_path => false)}", :title => "Share on Facebook"}
+    Share on Facebook
+  %a.twitter.prettySocial.button{"data-description" => "#{role_description}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Tweet this
+
+  %a.mail.button{:href => "mailto:?subject=Clear descriptions of the people who care in the NHS, what they do, and how they fit into the system. #{url_for(:only_path => false)}&redirect_uri=#{url_for(:only_path => false)}", :title => "Share by Email"}
+    Email to a friend
+
+  %script.source{:type => "text/javascript"}
+    $('.prettySocial').prettySocial();
+

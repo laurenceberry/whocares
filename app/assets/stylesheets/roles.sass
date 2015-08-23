@@ -1,3 +1,7 @@
+ul.jobs-list
+  max-width: 600px
+  margin: auto
+
 ul.professions, ul.roles, ul.jobs-list
   a
     +span-columns(12)
@@ -19,24 +23,9 @@ ul.professions, ul.roles, ul.jobs-list
     .head
       background-color: $secondary
       width: 100%
-      padding: 5px 15px
       color: $white
-    .description
-    p
-      font-size: 1em
-      text-align: left
-      margin: 15px
-      color: $b80
+    .head, .description
+      padding: 5px 15px
+      p
+        text-align: left
 
-
-  .jobs-card
-    padding-left: 15px
-
-li.job-tag
-  padding: 4px 5px 0px 5px
-  border-radius: 4px
-  margin: 5px
-  border: 1px solid #DAE3E5
-  background-color: #F4F7F7
-  a
-    text-decoration: none

@@ -1,19 +1,13 @@
-.intro
+%section.intro
   %h1= @role.name
-
-%section.content
   %p=data_exists?(@role.description)
 
-  %br
-  %p.social-container
-    %a.twitter.prettySocial.button{"data-description" => "#{role_description}", "data-type" => "twitter", "data-url" => url_for(:only_path => false), "data-via" => "whocaresapp", :href => "#", :title => "Share on Twitter"}Share on Twitter
+  -if @role.jobs.any?
+    %br
+    %h2 Jobs they do
+    %ul.jobs-list
+      - @role.jobs.each do |job|
+        %li.job-tag
+          = link_to job.title, job_path(job), :class => 'tag'
 
-  %br
-  %hr
-  %ul.jobs
-    - @role.jobs.each do |job|
-      %li.job-tag
-        = link_to job.title, job_path(job), :class => 'tag'
-
-%script.source{:type => "text/javascript"}
-  $('.prettySocial').prettySocial();
+=render :partial => 'shared/share_links'

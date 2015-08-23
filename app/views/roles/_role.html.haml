@@ -4,6 +4,6 @@
   .description
     %p=data_exists?(role.description).truncate(140)
 
-  %ul.jobs-card
-    - role.jobs.each do |job|
-      %li.job-tag= job.title
+    %ul.jobs
+      - role.jobs.each do |job|
+        %li.job-tag= job.title

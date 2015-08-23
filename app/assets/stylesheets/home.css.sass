@@ -33,19 +33,13 @@
         margin: 0 5px 0 5px
 
   section
-    width: 100%
-    padding: 75px 25px
-    text-align: center
-    background-color: darken($secondary, 5%)
-    .button
-      background-color: $b05
-      color: darken($secondary, 15%)
     h1, h2, p
       text-align: center
     p
       margin-bottom: 20px
-
-  section:nth-child(odd)
+    .button:hover
+      background-color: #fff
+  section:nth-child(even)
     background-color: $secondary
 
   section:first-child
@@ -60,6 +54,9 @@
     input.button
       background-color: $b05 !important
       color: darken($secondary, 15%) !important
+
+  section.professions
+    background-color: darken($secondary, 5%)
 
   section.contribute
     background-color: $primary

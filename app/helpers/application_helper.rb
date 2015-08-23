@@ -12,10 +12,14 @@ module ApplicationHelper
   end
 
   def role_description
-    if @role.description.blank?
-      "Can you tell us about #{@role.name + "s"}?"
+    if @role
+      if @role.description.blank?
+        "Can you tell us about #{@role.name + "s"}?"
+      else
+        truncate(@role.description, length: 95)
+      end
     else
-      truncate(@role.description, length: 95)
+      "Clear descriptions of the people who care in the NHS, what they do, and how they fit into the system."
     end
   end
 
@@ -42,9 +46,9 @@ module ApplicationHelper
         link_to('Sign out', destroy_admin_session_path, :method => :delete)
       end
     else
-      content_tag(:li) do
-        link_to('Sign in', new_admin_session_path)
-      end
+      # content_tag(:li) do
+      #   link_to('Sign in', new_admin_session_path)
+      # end
     end
   end
 
