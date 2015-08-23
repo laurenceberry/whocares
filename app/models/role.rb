@@ -2,6 +2,7 @@ class Role < ActiveRecord::Base
   belongs_to :profession
   has_and_belongs_to_many :conditions
   has_and_belongs_to_many :jobs
+  has_many :suggestions
 
   def self.search(search)
 

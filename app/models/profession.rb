@@ -7,7 +7,7 @@ class Profession < ActiveRecord::Base
       Profession.create!(row.to_hash) unless Profession.find_by(name:  row.to_hash['name'])
     end
   end
-  
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names

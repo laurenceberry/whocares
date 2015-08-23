@@ -10,4 +10,52 @@
         %li.job-tag
           = link_to job.title, job_path(job), :class => 'tag'
 
+
+  %p.suggestion
+    %a{:href => "#suggest", :onclick => "$('.suggestion').show();$('p.suggestion').hide();"}Improve this information
+  #suggest
+  .suggestion{:style => "display:none"}
+    %h2 Suggest an improvement
+    = form_for([@role, @role.suggestions.build], :url => profession_role_suggestions_path(@profession, @role)) do |f|
+      = f.label :suggester, "Your email or Twitter handle"
+      %br
+      = f.text_field :suggester
+      %br
+
+      = f.label :description, "Suggestions to description"
+      %br
+      = f.text_area :description
+      %br
+
+      = f.label :jobs, "Suggestions for jobs"
+      %br
+      = f.text_area :jobs
+      %br
+
+      = f.label :sources, "Provide any sources for these suggestions"
+      %br
+      = f.text_area :sources
+      %br
+      = f.submit "Send suggestion", :class => 'button'
+
+-if current_admin
+
+  %section.suggestions
+    %h2 Comments
+    - @role.suggestions.each do |suggestion|
+      %p
+        %strong Suggester:
+        = suggestion.suggester
+      %p
+        %strong Description:
+        = suggestion.description
+      %p
+        %strong Jobs:
+        = suggestion.jobs
+      %p
+        %strong Sources:
+        = suggestion.sources
+
+
 =render :partial => 'shared/share_links'
+

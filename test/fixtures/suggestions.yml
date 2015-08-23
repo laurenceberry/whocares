@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  suggester: MyString
+  description: MyText
+  jobs: MyText
+  sources: MyText
+  role_id: 
+
+two:
+  suggester: MyString
+  description: MyText
+  jobs: MyText
+  sources: MyText
+  role_id: 

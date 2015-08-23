@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection { post :import }
     resources :roles do
       collection { post :import }
+      resources :suggestions
     end
   end
 
