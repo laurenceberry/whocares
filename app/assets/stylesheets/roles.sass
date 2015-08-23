@@ -1,15 +1,18 @@
-ul.jobs-list
-  max-width: 600px
-  margin: auto
-  text-align: left
+#show
+  ul.jobs-list
+    max-width: 600px
+    margin: auto
+    text-align: left
 
-ul.professions, ul.roles, ul.jobs-list
+
+
+ul.jobs-list, ul.professions, ul.roles
   a
     +span-columns(12)
     +omega(0)
     +breakpoint(medium)
-      +span-columns(4)
-      +omega(3n)
+      +span-columns(3)
+      +omega(4n)
 
     li.role, li.profession, li.job
       width: 100%
@@ -29,6 +32,14 @@ ul.professions, ul.roles, ul.jobs-list
       padding: 5px 15px
       p
         text-align: left
+
+ul.professions, ul.roles
+  a
+    +span-columns(12)
+    +omega(0)
+    +breakpoint(medium)
+      +span-columns(4)
+      +omega(3n)
 
 p.suggestion
   clear: both
