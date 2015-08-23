@@ -2,13 +2,14 @@
   %h1= @role.name
   %p=data_exists?(@role.description)
 
-  -if @role.jobs.any?
-    %br
-    %h2 Jobs they might do
-    %ul.jobs-list
-      - @role.jobs.each do |job|
-        %li.job-tag
-          = link_to job.title, job_path(job), :class => 'tag'
+  // JOBS HIDDEN FOR NOW
+  / -if @role.jobs.any?
+  /   %br
+  /   %h2 Jobs they might do
+  /   %ul.jobs-list
+  /     - @role.jobs.each do |job|
+  /       %li.job-tag
+  /         = link_to job.title, job_path(job), :class => 'tag'
 
 
   %p.suggestion
@@ -27,7 +28,7 @@
       = f.text_area :description
       %br
 
-      = f.label :jobs, "Suggestions for jobs"
+      = f.label :jobs, "Suggestions for jobs they do"
       %br
       = f.text_area :jobs
       %br
