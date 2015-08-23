@@ -10,7 +10,7 @@
 %section.search
   %h2 Search for a role
   = form_tag(search_results_path, :method => "get", :id => 'search') do
-    = text_field_tag :search, params[:search], :placeholder => "Maxillofacial Prosthetist"
+    = text_field_tag :search, params[:search], :placeholder => "E.g. Maxillofacial Prosthetist"
     = submit_tag "Search", :name => nil, :class => 'button'
 
 %section.professions
