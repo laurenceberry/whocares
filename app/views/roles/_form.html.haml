@@ -1,28 +1,29 @@
 = form_for [@profession, @role] do |f|
   = f.label :name
-  %br/
+  %br
   = f.text_field :name
 
   = f.label :description
-
+  %br
   = f.text_area :description
 
-  %p
-    Check conditions this role is involved in
+  %p Conditions this role is involved in
   - Condition.all.each do |condition|
     = check_box_tag "role[condition_ids][]", condition.id, @role.condition_ids.include?(condition.id), id: dom_id(condition)
     = label_tag dom_id(condition), condition.name
     = hidden_field_tag "role[condition_ids][]", nil
+    %br
 
-    %br/
-
-  %p
-    Check jobs this role is involved in
+  %p Jobs this role is involved in
   - Job.all.each do |job|
     = check_box_tag "role[job_ids][]", job.id, @role.job_ids.include?(job.id), id: dom_id(job)
     = label_tag dom_id(job), job.title
     = hidden_field_tag "role[job_ids][]", nil
-
-    %br/
+    %br
+  %br
+  %br
+  = f.label :search_tags, "Write tags here to help improve search results"
+  %br
+  = f.text_area :search_tags
 
   = f.submit

@@ -6,7 +6,7 @@ class Role < ActiveRecord::Base
 
   def self.search(search)
 
-    where("LOWER(name) LIKE ? OR description LIKE ?", "%#{search.downcase}%","%#{search}%")
+    where("LOWER(name) LIKE ? OR description LIKE ? OR LOWER(search_tags) LIKE ?", "%#{search.downcase}%","%#{search}%","%#{search.downcase}%")
 
   end
 
