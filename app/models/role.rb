@@ -14,6 +14,7 @@ class Role < ActiveRecord::Base
     CSV.foreach(file.path, headers: true) do |row|
       roles = find_by_name(row["name"]) || new
       Role.create!(row.to_hash) unless Role.find_by(name:  row.to_hash['name'])
+      Role.find_by(name:  row.to_hash['name']).update!(row.to_hash)
     end
   end
 

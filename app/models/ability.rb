@@ -14,6 +14,7 @@ class Ability
       can :update, :all
       can :create, :all
       can :destroy, :all
+      can :manage, :all
     end
   end
 end

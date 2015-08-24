@@ -14,8 +14,8 @@
       =form_tag import_profession_roles_path, multipart: true do
         = file_field_tag :file
         = submit_tag "Upload roles"
-        = link_to "Download CSV", profession_roles_path(format: "csv") |
-        = link_to "Excel", profession_roles_path(format: "xls")
+      = link_to "Download CSV", profession_roles_path(format: "csv") |
+      = link_to "Excel", profession_roles_path(format: "xls")
 
     = link_to 'Add new role', new_profession_role_path(@profession)
     = link_to 'Edit profession', edit_profession_path(@profession)
