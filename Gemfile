@@ -51,6 +51,7 @@ gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'sitemap_generator'
 gem 'bourbon', '~> 3.2.3'
 gem 'neat'
+gem 'friendly_id', '~> 5.1.0'
 
 group :test do
   gem 'cucumber-rails', :require => false

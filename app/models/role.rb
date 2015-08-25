@@ -5,9 +5,7 @@ class Role < ActiveRecord::Base
   has_many :suggestions
 
   def self.search(search)
-
-    where("LOWER(name) LIKE ? OR description LIKE ? OR LOWER(search_tags) LIKE ?", "%#{search.downcase}%","%#{search}%","%#{search.downcase}%")
-
+    where("LOWER(name) @@ ? OR description @@ ? OR LOWER(search_tags) @@ ?", "#{search.downcase}","#{search}","#{search.downcase}")
   end
 
   def self.import(file)
