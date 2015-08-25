@@ -16,10 +16,10 @@
     = text_field_tag :search, params[:search], :placeholder => "E.g. Maxillofacial Prosthetist"
     = submit_tag "Search", :name => nil, :class => 'button'
 
-%section.professions
-  %p Or explore the NHS:
-  = link_to 'Browse all professions', professions_path, :class => 'button'
-  = link_to 'Browse all jobs', jobs_path, :class => 'button'
-  = link_to 'Suggest an update', contact_path, :class => 'button'
+  //%section.professions
+    %p Or explore the NHS:
+    = link_to 'Browse all professions', professions_path, :class => 'button'
+    = link_to 'Browse all jobs', jobs_path, :class => 'button'
+    = link_to 'Suggest an update', contact_path, :class => 'button'//
 
 
