@@ -10,9 +10,9 @@
         = render partial: 'roles/role', :locals => { :role => role }
 - else
   %p We couldn't find any NHS roles containing "#{params[:search]}".
-  
+
   %p Try searching again:
-  
+
   = form_tag(search_results_path, :method => "get", :id => 'search') do
     = text_field_tag :search, params[:search], :placeholder => "E.g. Maxillofacial Prosthetist"
     = submit_tag "Search", :name => nil, :class => 'button'
