@@ -9,8 +9,8 @@
       %a{:href => profession_role_path(role.profession_id, role)}
         = render partial: 'roles/role', :locals => { :role => role }
 - else
-  %p We couldn't find any NHS roles containing "#{params[:search]}".
-
+  %h2 We couldn't find any NHS roles containing "#{params[:search]}".
+  %br
   %p Try searching again:
 
   = form_tag(search_results_path, :method => "get", :id => 'search') do
