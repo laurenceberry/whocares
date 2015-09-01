@@ -1,0 +1,46 @@
+.pages#collection
+  .main
+    padding-top: 0
+  section
+    float: left
+  section:nth-child(even)
+    background-color: $b05
+
+  .intro
+    margin-top: 0
+    h1, p
+      text-align: center
+
+  .image
+    background-color: $primary !important
+    min-height: 350px
+    background: image-url('skylight.jpg') no-repeat bottom
+    background-size: cover
+
+
+  .steps
+    .step
+      +span-columns(12)
+      +omega(0)
+      +breakpoint(medium)
+        +span-columns(3)
+        +omega(4n)
+        margin-bottom: 25px
+
+      h3
+        text-align: left
+
+      &:not(:last-child)
+        h3:after
+          font-family: whocares
+          content: "a"
+          text-align: right
+          margin-left: 20px
+          position: relative
+          top: 3px
+          color: $primary
+
+      ul
+        li
+          color: $secondary
+          clear: both

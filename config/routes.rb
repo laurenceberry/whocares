@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   get "search_results" => "pages#search_results"
+  get "collection" => "pages#collection"
 
 end
