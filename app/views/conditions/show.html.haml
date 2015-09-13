@@ -1,7 +1,48 @@
-.intro
+%section.intro
   %h1= @condition.name
+  %p= @condition.description
 
-%ul.roles
-  - @condition.roles.each do |role|
-    %a{:href => profession_role_path(role.profession_id, role)}
-      = render partial: 'roles/role', :locals => { :role => role }
+%section.image{:style => "background-image:url(#{@condition.image.url})"}
+
+%section.steps
+  .step
+    %h3 Discovery
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
+    %ul
+      %li Paramedic
+  .step
+    %h3 Diagnosis
+    %p
+      Duis sollicitudin vitae arcu eu tincidunt. Aliquam sapien elit, vestibulum vel volutpat hendrerit, facilisis nec lorem. Pellentesque finibus enim nec velit dapibus.
+    %ul
+      %li Doctor
+      %li Nurse
+      %li Radiologist
+  .step
+    %h3 Preperation
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
+    %ul
+      %li Occupational therepist
+      %li Pharmacist
+  .step
+    %h3 Recovery
+    %p
+      Duis sollicitudin vitae arcu eu tincidunt. Aliquam sapien elit, vestibulum vel volutpat hendrerit, facilisis nec lorem. Pellentesque finibus enim nec velit dapibus.
+    %ul
+      %li Dietician
+      %li Physiotherapist
+  .step
+    %h3 Ongoing care
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
+    %ul
+      %li Occupational therepist
+      %li Doctor
+
+%section.roles
+  %ul.roles
+    - @condition.roles.each do |role|
+      %a{:href => profession_role_path(role.profession_id, role)}
+        = render partial: 'roles/role', :locals => { :role => role }

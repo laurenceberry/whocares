@@ -54,7 +54,7 @@ class ConditionsController < ApplicationController
 
   private
     def condition_params
-      params.require(:condition).permit(:name, :description)
+      params.require(:condition).permit(:name, :description, :image)
     end
 
 end

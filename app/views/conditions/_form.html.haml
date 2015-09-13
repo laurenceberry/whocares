@@ -8,13 +8,19 @@
       %ul
         - @condition.errors.full_messages.each do |msg|
           %li= msg
-  %p
-    = f.label :name
-    %br/
-    = f.text_field :name
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-  %p
-    = f.submit
+  = f.label :name
+  %br/
+  = f.text_field :name
+  %br
+
+  = f.label :image
+  %br
+  = f.file_field :image
+  %br
+  %br
+  = f.label :description
+
+  %br
+  = f.text_area :description
+
+  = f.submit
