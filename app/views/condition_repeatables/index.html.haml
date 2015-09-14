@@ -1,0 +1,25 @@
+%h1 Listing condition_repeatables
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Content
+      %th Profile
+      %th
+      %th
+      %th
+
+  %tbody
+    - @condition_repeatables.each do |condition_repeatable|
+      %tr
+        %td= condition_repeatable.name
+        %td= condition_repeatable.content
+        %td= condition_repeatable.condition
+        %td= link_to 'Show', condition_repeatable
+        %td= link_to 'Edit', edit_condition_repeatable_path(condition_repeatable)
+        %td= link_to 'Destroy', condition_repeatable, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Condition repeatable', new_condition_repeatable_path

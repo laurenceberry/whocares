@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @condition_repeatable.name
+%p
+  %b Content:
+  = @condition_repeatable.content
+%p
+  %b Condition:
+  = @condition_repeatable.condition
+
+= link_to 'Edit', edit_condition_repeatable_path(@condition_repeatable)
+\|
+= link_to 'Back', condition_repeatables_path

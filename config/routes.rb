@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :contributors, :path => '', :path_names => {:sign_in => 'sign_in', :sign_out => 'sign_out'}
   devise_for :admins, :path => '/admin', :path_names => {:sign_in => 'sign_in', :sign_out => 'sign_out'}
 
+  resources :condition_repeatables
+
+
   resources :professions do
     collection { post :import }
     resources :roles do

@@ -4,6 +4,9 @@ class Condition < ActiveRecord::Base
   has_attached_file :image, styles: { large: "1000x600>"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  has_many :repeatables, class_name: "ConditionRepeatable"
+  accepts_nested_attributes_for :repeatables, allow_destroy: true
+
   validates :name, presence: true
 
   def self.import(file)

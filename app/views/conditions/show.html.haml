@@ -6,11 +6,12 @@
 
 %section.steps
   .step
-    %h3 Discovery
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
-    %ul
-      %li Paramedic
+    - @condition.repeatables.each do |br|
+      %p
+        %span= br.name + ":"
+        = br.content
+
+
   .step
     %h3 Diagnosis
     %p
