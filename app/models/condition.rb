@@ -5,7 +5,7 @@ class Condition < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   has_many :repeatables, class_name: "ConditionRepeatable", :dependent => :destroy
-  accepts_nested_attributes_for :repeatables, :allow_destroy => true,:reject_if => :all_blank
+  accepts_nested_attributes_for :repeatables, :allow_destroy => true, :reject_if => :all_blank
 
   validates :name, presence: true
 

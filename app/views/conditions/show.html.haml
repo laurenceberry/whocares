@@ -7,9 +7,8 @@
 %section.steps
   .step
     - @condition.repeatables.each do |br|
-      %p
-        %span= br.name + ":"
-        = br.content
+      %h3= br.name
+      %p= markdown(br.content)
 
 
   .step
