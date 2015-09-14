@@ -1,5 +1,5 @@
 #show
-  ul.jobs-list
+  ul.jobs-list, ul.conditions-list
     max-width: 600px
     margin: auto
     text-align: left
@@ -12,9 +12,9 @@ ul.professions, ul.roles
       +span-columns(4)
       +omega(3n)
 
-ul.jobs-list, ul.professions, ul.roles
+ul.jobs-list, ul.professions, ul.roles, ul.conditions-list
   a
-    li.role, li.profession, li.job
+    li.role, li.profession, li.job, li.condition
       width: 100%
       margin-bottom: 25px
       background-color: $white
@@ -40,8 +40,8 @@ p.suggestion
 section.suggestion
   padding-top: 0
 
-.jobs#index
-  ul.jobs-list
+.jobs#index, .conditions#index
+  ul.jobs-list, ul.conditions-list
     a
       +span-columns(12)
       +omega(0)

@@ -1,6 +1,9 @@
-.intro
+%section.title
   %h1 Conditions
 
-%ul.tags
+%ul.conditions-list
   - @conditions.each do |condition|
-    %li= link_to condition.name, condition_path(condition), :class => 'button'
+    %a{:href => condition_path(condition)}
+      %li.condition
+        .head
+          %h3= condition.name
