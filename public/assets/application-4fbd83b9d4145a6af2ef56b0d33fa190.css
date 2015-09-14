@@ -1,0 +1,760 @@
+@font-face {
+  font-family: 'frutiger_reg';
+  src: url(/assets/frutiger_reg.eot?#iefix) format("embedded-opentype"), url(/assets/frutiger_reg.woff) format("woff"), url(/assets/frutiger_reg.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_light';
+  src: url(/assets/frutiger_light.eot?#iefix) format("embedded-opentype"), url(/assets/frutiger_light.woff) format("woff"), url(/assets/frutiger_light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'frutiger_black_italic';
+  src: url(/assets/FrutigerLT-BlackItalic.eot?#iefix) format("embedded-opentype"), url(/assets/FrutigerLT-BlackItalic.woff) format("woff"), url(/assets/FrutigerLT-BlackItalic.ttf) format("truetype");
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+body {
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "frutiger_reg", arial, sans-serif;
+  font-size: 14px;
+}
+@media (min-width: 50em) {
+  /* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+  body {
+    font-size: 16px;
+  }
+}
+
+/* line 9, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+h1, h2, h3, p, a {
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+/* line 16, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+h1 {
+  font-size: 1.8em;
+  margin: 0 auto 25px auto;
+}
+
+/* line 20, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+h2 {
+  font-size: 1.4em;
+}
+
+/* line 23, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+p, a {
+  font-size: 1em;
+  color: #464646;
+}
+
+/* line 28, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:link {
+  text-decoration: none;
+  color: #252525;
+}
+/* line 31, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+a:visited {
+  color: #252525;
+}
+
+/* line 34, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+p a {
+  text-decoration: underline !important;
+}
+
+/* line 38, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+.pages h1, .pages h2, .pages p, .roles#show h1, .roles#show h2, .roles#show p {
+  text-align: left;
+}
+
+/* line 41, /Users/laurenceberry/code/whocares/app/assets/stylesheets/typography.css.sass */
+.pages#search_results h1 {
+  text-align: center;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body {
+  margin: 0;
+}
+/* line 5, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+body div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+.main {
+  padding: 50px 0;
+}
+
+/* line 14, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+#search_results .main, #index .main, .jobs#show .main, .professions#show .main {
+  padding: 50px 25px;
+}
+
+/* line 17, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section {
+  width: 100%;
+  padding: 75px 25px;
+  text-align: center;
+}
+/* line 21, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section .button {
+  background-color: whitesmoke;
+  color: #2851c6;
+}
+/* line 24, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section h1, section h2, section p {
+  text-align: center;
+}
+/* line 26, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section p {
+  margin-bottom: 20px;
+}
+
+/* line 29, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section.title {
+  padding: 25px;
+}
+
+/* line 32, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+section.about {
+  padding: 1px 25px 25px 25px;
+}
+
+/* line 35, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+ul {
+  padding: 0;
+  list-style: none;
+}
+/* line 38, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+ul li {
+  float: left;
+}
+
+/* line 41, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+.inner-container {
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+/* line 45, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+li.job-tag {
+  display: none !important;
+  padding: 4px 5px 0px 5px;
+  border-radius: 4px;
+  margin: 5px 5px 15px 5px;
+  border: 1px solid #dae3e5;
+  background-color: #f4f7f7;
+  float: none;
+  display: inline-block;
+}
+
+/* line 57, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+.description .job-tag {
+  float: left;
+}
+
+/* line 62, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+#search {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+/* line 66, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+#search input {
+  width: 100%;
+  float: left;
+  padding: 9px;
+  border-radius: 3px;
+  border: 1px solid #c2c2c2;
+  -webkit-appearance: none;
+}
+@media (min-width: 50em) {
+  /* line 66, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+  #search input {
+    width: 65%;
+  }
+}
+/* line 76, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+#search input.button {
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: #5c7ede;
+  padding: 10px 10px 8px 10px;
+  margin: 5px 0 0 0px;
+}
+@media (min-width: 50em) {
+  /* line 76, /Users/laurenceberry/code/whocares/app/assets/stylesheets/layout.css.sass */
+  #search input.button {
+    width: 25%;
+    margin: 0 5px 0 5px;
+  }
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header input,
+.button {
+  display: inline-block;
+  background: #5c7ede;
+  color: white;
+  padding: 10px 10px 8px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "frutiger_reg", arial, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  min-width: 200px;
+  text-align: center;
+  -webkit-appearance: none;
+}
+/* line 19, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header input:hover,
+.button:hover {
+  background: #5c7ede;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 24, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header .button, .admin-header input {
+  background: #6ecfa0;
+  font-size: 1em;
+  z-index: 999;
+  min-width: 0;
+}
+/* line 29, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header .button:hover, .admin-header input:hover {
+  background: #81d5ac;
+}
+
+/* line 32, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.admin-header input {
+  background: #6ecfa0;
+  font-size: 1em;
+}
+
+/* line 37, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.return, .contributor_sign_in {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 999;
+  background: #ebebeb;
+  color: black !important;
+}
+/* line 44, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.return:hover, .contributor_sign_in:hover {
+  background: #f8f8f8;
+}
+
+/* line 47, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.contributor_sign_in {
+  right: 25px;
+  left: auto;
+}
+
+/* line 51, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.return, .about_page {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 999;
+  background: #ebebeb;
+  color: black !important;
+}
+/* line 58, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.return:hover, .about_page:hover {
+  background: #f8f8f8;
+}
+
+/* line 61, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+.about_page {
+  left: 25px;
+  right: auto;
+}
+
+/* line 65, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.twitter {
+  background-color: #59adec;
+  color: white;
+  text-decoration: none;
+}
+/* line 69, /Users/laurenceberry/code/whocares/app/assets/stylesheets/buttons.css.sass */
+a.twitter:hover {
+  background-color: #59adec;
+}
+
+/* line 1, /Users/laurenceberry/code/whocares/app/assets/stylesheets/forms.sass */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* line 4, /Users/laurenceberry/code/whocares/app/assets/stylesheets/forms.sass */
+input[type=text], input[type=email], input[type=password], textarea {
+  width: 100%;
+  margin: 11px 0 25px 0;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid #5c7ede;
+  padding: 8px;
+  -webkit-appearance: none;
+  font-size: 1em;
+}
+
+/* line 13, /Users/laurenceberry/code/whocares/app/assets/stylesheets/forms.sass */
+label {
+  float: left;
+}
+
+/* line 15, /Users/laurenceberry/code/whocares/app/assets/stylesheets/forms.sass */
+input.button {
+  width: auto;
+  background-color: #5c7ede;
+  color: white;
+  float: left;
+}
+
+/* line 21, /Users/laurenceberry/code/whocares/app/assets/stylesheets/forms.sass */
+::-webkit-input-placeholder {
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "frutiger_reg", arial, sans-serif;
+}
+
+/* line 1, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header {
+  text-align: right;
+  background-color: whitesmoke;
+}
+/* line 4, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header ul {
+  padding: 25px;
+  min-height: 65px;
+  margin: 0;
+}
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header ul li {
+  margin-left: 15px;
+  float: right;
+}
+/* line 12, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header .controls {
+  width: 100%;
+  background-color: #5c7ede;
+}
+/* line 15, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header .controls a {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  margin: 20px 25px 15px 15px;
+}
+/* line 21, /Users/laurenceberry/code/whocares/app/assets/stylesheets/header.css.sass */
+header .logo {
+  float: left;
+  font-size: 1.2em;
+  font-family: frutiger_black_italic, arial, sans-serif;
+  margin: -12px 0 0 0;
+  padding: 8px 10px 8px 10px;
+  background-color: #1c5daf;
+  color: white;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header {
+  padding: 15px 25px;
+  margin: 0 -25px;
+  min-height: 70px;
+  background: #3cb47a;
+}
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .button {
+  float: right;
+}
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .upload-form input {
+  color: #7d7d7d;
+}
+/* line 13, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .upload-form .button {
+  color: #3cb47a;
+}
+/* line 15, /Users/laurenceberry/code/whocares/app/assets/stylesheets/admin_header.css.sass */
+.admin-header .upload-form .button, .admin-header .upload-form input {
+  float: left;
+}
+
+/* line 4, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index .main {
+  padding: 0;
+}
+/* line 6, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index h1 {
+  max-width: 800px;
+  margin: auto;
+}
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section h1, .pages#index section h2, .pages#index section p {
+  text-align: center;
+  color: black !important;
+}
+/* line 14, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section p {
+  margin-bottom: 20px;
+}
+/* line 16, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section .button:hover {
+  background-color: white;
+}
+/* line 19, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section:nth-child(odd) {
+  background-color: #5c7ede;
+}
+/* line 22, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section:first-child {
+  background-color: whitesmoke;
+}
+/* line 25, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.intro, .pages#index section.about {
+  background-color: whitesmoke;
+}
+/* line 28, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.search {
+  padding: 15px 25px 50px 25px;
+  display: inline-block;
+}
+/* line 31, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.search input.button {
+  background-color: whitesmoke !important;
+  color: #2851c6 !important;
+}
+/* line 35, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.professions {
+  background-color: #476dda;
+}
+/* line 38, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.jobs {
+  background-color: #00f0bc;
+}
+/* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.jobs .button {
+  color: #009a78;
+}
+/* line 42, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.contribute {
+  background-color: #00e6b4;
+}
+/* line 44, /Users/laurenceberry/code/whocares/app/assets/stylesheets/home.css.sass */
+.pages#index section.contribute .button {
+  color: #009a78;
+}
+
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+#contact form {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+@media (min-width: 50em) {
+  /* line 7, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+  #contact form input {
+    width: 60%;
+    margin-left: 5px;
+  }
+}
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+#contact form input.button {
+  width: 100%;
+  padding: 10px 10px 8px 10px;
+  min-width: 0;
+  background-color: #5c7ede;
+  color: whitesmoke;
+  float: none;
+}
+@media (min-width: 50em) {
+  /* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+  #contact form input.button {
+    width: 35%;
+  }
+}
+/* line 20, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+#contact form input.button:hover {
+  cursor: pointer;
+}
+
+/* line 22, /Users/laurenceberry/code/whocares/app/assets/stylesheets/contact.css.sass */
+div.mce_inline_error {
+  width: 60%;
+  float: left;
+  background-color: #5c7ede !important;
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .main {
+  padding-top: 0;
+}
+/* line 5, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show section {
+  float: left;
+}
+/* line 7, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show section:nth-child(even) {
+  background-color: whitesmoke;
+}
+/* line 10, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .intro {
+  margin-top: 0;
+}
+/* line 12, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .intro h1, .conditions#show .intro p {
+  text-align: center;
+}
+/* line 15, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .image {
+  background-color: #00e6b4 !important;
+  min-height: 350px;
+  background: url(/assets/stroke.png) no-repeat center;
+  background-size: cover;
+}
+/* line 23, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .steps .step {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+.conditions#show .steps .step:last-child {
+  margin-right: 0;
+}
+/* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+.conditions#show .steps .step:nth-child(0) {
+  margin-right: 0;
+}
+/* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+.conditions#show .steps .step:nth-child(0+1) {
+  clear: left;
+}
+@media (min-width: 50em) {
+  /* line 23, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+  .conditions#show .steps .step {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-bottom: 25px;
+  }
+  /* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+  .conditions#show .steps .step:last-child {
+    margin-right: 0;
+  }
+  /* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  .conditions#show .steps .step:nth-child(4n) {
+    margin-right: 0;
+  }
+  /* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  .conditions#show .steps .step:nth-child(4n+1) {
+    clear: left;
+  }
+}
+/* line 31, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .steps .step h3, .conditions#show .steps .step p {
+  text-align: left;
+}
+/* line 35, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .steps .step:not(:last-child) h3:after {
+  font-family: whocares;
+  content: "a";
+  text-align: right;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+  color: #00e6b4;
+}
+/* line 44, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .steps .step a {
+  color: #5c7ede;
+  text-decoration: none !important;
+  clear: both;
+  display: block;
+  text-align: left;
+}
+/* line 50, /Users/laurenceberry/code/whocares/app/assets/stylesheets/collection.sass */
+.conditions#show .steps .step a:hover {
+  text-align: underline;
+}
+
+/* line 2, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+#show ul.jobs-list, #show ul.conditions-list {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.professions a, ul.roles a {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+ul.professions a:last-child, ul.roles a:last-child {
+  margin-right: 0;
+}
+/* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+ul.professions a:nth-child(0), ul.roles a:nth-child(0) {
+  margin-right: 0;
+}
+/* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+ul.professions a:nth-child(0+1), ul.roles a:nth-child(0+1) {
+  clear: left;
+}
+@media (min-width: 50em) {
+  /* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+  ul.professions a, ul.roles a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+  ul.professions a:last-child, ul.roles a:last-child {
+    margin-right: 0;
+  }
+  /* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  ul.professions a:nth-child(3n), ul.roles a:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  ul.professions a:nth-child(3n+1), ul.roles a:nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+/* line 17, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.jobs-list a li.role, ul.jobs-list a li.profession, ul.jobs-list a li.job, ul.jobs-list a li.condition, ul.professions a li.role, ul.professions a li.profession, ul.professions a li.job, ul.professions a li.condition, ul.roles a li.role, ul.roles a li.profession, ul.roles a li.job, ul.roles a li.condition, ul.conditions-list a li.role, ul.conditions-list a li.profession, ul.conditions-list a li.job, ul.conditions-list a li.condition {
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: white;
+  border: solid 1px #ebebeb;
+  float: none;
+  display: inline-block;
+}
+/* line 24, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.jobs-list a li.role:hover, ul.jobs-list a li.profession:hover, ul.jobs-list a li.job:hover, ul.jobs-list a li.condition:hover, ul.professions a li.role:hover, ul.professions a li.profession:hover, ul.professions a li.job:hover, ul.professions a li.condition:hover, ul.roles a li.role:hover, ul.roles a li.profession:hover, ul.roles a li.job:hover, ul.roles a li.condition:hover, ul.conditions-list a li.role:hover, ul.conditions-list a li.profession:hover, ul.conditions-list a li.job:hover, ul.conditions-list a li.condition:hover {
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -moz-box-shadow: 0px 0px 10px 0px #d9d9d9;
+  -ms-box-shadow: 0px 0px 10px 0px #d9d9d9;
+  -o-box-shadow: 0px 0px 10px 0px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 10px 0px #d9d9d9;
+  box-shadow: 0px 0px 10px 0px #d9d9d9;
+}
+/* line 27, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.jobs-list a .head, ul.professions a .head, ul.roles a .head, ul.conditions-list a .head {
+  background-color: #5c7ede;
+  width: 100%;
+  color: white;
+}
+/* line 31, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.jobs-list a .head, ul.jobs-list a .description, ul.professions a .head, ul.professions a .description, ul.roles a .head, ul.roles a .description, ul.conditions-list a .head, ul.conditions-list a .description {
+  padding: 5px 15px;
+}
+/* line 33, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+ul.jobs-list a .head p, ul.jobs-list a .description p, ul.professions a .head p, ul.professions a .description p, ul.roles a .head p, ul.roles a .description p, ul.conditions-list a .head p, ul.conditions-list a .description p {
+  text-align: left;
+}
+
+/* line 37, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+p.suggestion {
+  clear: both;
+  margin: 25px auto 0 auto;
+}
+
+/* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+section.suggestion {
+  padding-top: 0;
+}
+
+/* line 45, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+.jobs#index ul.jobs-list a, .jobs#index ul.conditions-list a, .conditions#index ul.jobs-list a, .conditions#index ul.conditions-list a {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+.jobs#index ul.jobs-list a:last-child, .jobs#index ul.conditions-list a:last-child, .conditions#index ul.jobs-list a:last-child, .conditions#index ul.conditions-list a:last-child {
+  margin-right: 0;
+}
+/* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+.jobs#index ul.jobs-list a:nth-child(0), .jobs#index ul.conditions-list a:nth-child(0), .conditions#index ul.jobs-list a:nth-child(0), .conditions#index ul.conditions-list a:nth-child(0) {
+  margin-right: 0;
+}
+/* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+.jobs#index ul.jobs-list a:nth-child(0+1), .jobs#index ul.conditions-list a:nth-child(0+1), .conditions#index ul.jobs-list a:nth-child(0+1), .conditions#index ul.conditions-list a:nth-child(0+1) {
+  clear: left;
+}
+@media (min-width: 50em) {
+  /* line 45, /Users/laurenceberry/code/whocares/app/assets/stylesheets/roles.sass */
+  .jobs#index ul.jobs-list a, .jobs#index ul.conditions-list a, .conditions#index ul.jobs-list a, .conditions#index ul.conditions-list a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 40, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_span-columns.scss */
+  .jobs#index ul.jobs-list a:last-child, .jobs#index ul.conditions-list a:last-child, .conditions#index ul.jobs-list a:last-child, .conditions#index ul.conditions-list a:last-child {
+    margin-right: 0;
+  }
+  /* line 70, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  .jobs#index ul.jobs-list a:nth-child(4n), .jobs#index ul.conditions-list a:nth-child(4n), .conditions#index ul.jobs-list a:nth-child(4n), .conditions#index ul.conditions-list a:nth-child(4n) {
+    margin-right: 0;
+  }
+  /* line 75, /Users/laurenceberry/code/whocares/app/assets/stylesheets/neat/grid/_omega.scss */
+  .jobs#index ul.jobs-list a:nth-child(4n+1), .jobs#index ul.conditions-list a:nth-child(4n+1), .conditions#index ul.jobs-list a:nth-child(4n+1), .conditions#index ul.conditions-list a:nth-child(4n+1) {
+    clear: left;
+  }
+}
+
+/* line 1, /Users/laurenceberry/code/whocares/app/assets/stylesheets/social.sass */
+section.share-links {
+  background-color: whitesmoke !important;
+}
+/* line 3, /Users/laurenceberry/code/whocares/app/assets/stylesheets/social.sass */
+section.share-links .button {
+  color: whitesmoke !important;
+}
+/* line 5, /Users/laurenceberry/code/whocares/app/assets/stylesheets/social.sass */
+section.share-links a.twitter {
+  background-color: #00acee !important;
+}
+/* line 8, /Users/laurenceberry/code/whocares/app/assets/stylesheets/social.sass */
+section.share-links a.facebook {
+  background-color: #3b5998 !important;
+}
+/* line 11, /Users/laurenceberry/code/whocares/app/assets/stylesheets/social.sass */
+section.share-links a.mail {
+  background-color: #5c7ede !important;
+}
