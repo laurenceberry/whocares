@@ -3,4 +3,10 @@
   = f.text_field :name
   = f.label :content
   = f.text_field :content
-  = link_to 'remove', '#', class: "remove_field"
+
+  = f.label :_destroy, "Remove"
+  = f.check_box :_destroy
+  %br
+  %br
+  %br
+  = link_to 'Remove', '#', class: "remove_field"

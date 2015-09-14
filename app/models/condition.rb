@@ -4,8 +4,8 @@ class Condition < ActiveRecord::Base
   has_attached_file :image, styles: { large: "1000x600>"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  has_many :repeatables, class_name: "ConditionRepeatable"
-  accepts_nested_attributes_for :repeatables, allow_destroy: true
+  has_many :repeatables, class_name: "ConditionRepeatable", :dependent => :destroy
+  accepts_nested_attributes_for :repeatables, :allow_destroy => true,:reject_if => :all_blank
 
   validates :name, presence: true
 

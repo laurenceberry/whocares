@@ -54,7 +54,7 @@ class ConditionsController < ApplicationController
 
   private
     def condition_params
-      params.require(:condition).permit(:name, :description, :image, repeatables_attributes: [:id, :name, :content, :condition_id])
+      params.require(:condition).permit(:name, :description, :image, repeatables_attributes: [:id, :name, :content, :condition_id, :_destroy])
     end
 
 end
