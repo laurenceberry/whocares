@@ -40,6 +40,13 @@
           = link_to "Download CSV", conditions_path(format: "csv") |
           = link_to "Excel", conditions_path(format: "xls")
 
+  - if condition_show_page
+    = link_to 'Edit condition', edit_condition_path(@condition)
+    - if current_admin
+      = link_to 'Remove condition', [@condition],         |
+          method: :delete,                                       |
+          data: { confirm: 'Are you sure?' }, :class => 'button' |
+
 
   - if current_page?(jobs_path)
     = link_to 'Add new job', new_job_path

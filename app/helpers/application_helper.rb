@@ -92,6 +92,9 @@ module ApplicationHelper
     controller.controller_name == "conditions" && controller.action_name == "index"
   end
 
+  def condition_show_page
+    controller.controller_name == "conditions" && controller.action_name == "show"
+  end
 
   # Helper to render a repeating fields fieldset and add a button to add and remove dynamically.
   def link_to_add_fields(name, f, association)

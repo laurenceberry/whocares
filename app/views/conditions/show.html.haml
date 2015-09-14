@@ -5,41 +5,10 @@
 %section.image{:style => "background-image:url(#{@condition.image.url})"}
 
 %section.steps
-  .step
-    - @condition.repeatables.each do |br|
+  - @condition.repeatables.each do |br|
+    .step
       %h3= br.name
       %p= markdown(br.content)
-
-
-  .step
-    %h3 Diagnosis
-    %p
-      Duis sollicitudin vitae arcu eu tincidunt. Aliquam sapien elit, vestibulum vel volutpat hendrerit, facilisis nec lorem. Pellentesque finibus enim nec velit dapibus.
-    %ul
-      %li Doctor
-      %li Nurse
-      %li Radiologist
-  .step
-    %h3 Preperation
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
-    %ul
-      %li Occupational therepist
-      %li Pharmacist
-  .step
-    %h3 Recovery
-    %p
-      Duis sollicitudin vitae arcu eu tincidunt. Aliquam sapien elit, vestibulum vel volutpat hendrerit, facilisis nec lorem. Pellentesque finibus enim nec velit dapibus.
-    %ul
-      %li Dietician
-      %li Physiotherapist
-  .step
-    %h3 Ongoing care
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla at orci sit amet iaculis. Proin consectetur eros eget efficitur tempor.
-    %ul
-      %li Occupational therepist
-      %li Doctor
 
 %section.roles
   %ul.roles
