@@ -24,8 +24,9 @@
 
 %section.contribute
   %h2 Who cares by condition
-  %p Curated by professionals, discover who is involved in the care and treatment of specific conditions.
-  = link_to 'Browse conditions', conditions_path, :class => 'button'
-
+  / %p Curated by professionals, discover who is involved in the care and treatment of specific conditions.
+  / = link_to 'Browse conditions', conditions_path, :class => 'button'
+  %p Curated by professionals, you will be able to discover who is involved in the care and treatment of specific conditions.
+  = link_to 'Stay up-to-date', contact_path, :class => 'button'
 
 =render :partial => 'shared/share_links'
