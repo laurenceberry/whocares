@@ -5,7 +5,7 @@
 %section.image{:style => "background-image:url(#{@condition.image.url})"}
 
 %section.steps
-  - @condition.repeatables.each do |br|
+  - @condition.repeatables.reverse_each do |br|
     .step
       %h3= br.name
       %p= markdown(br.content)
