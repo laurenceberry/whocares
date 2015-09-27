@@ -2,7 +2,7 @@
   %h1= @condition.name
   %p= @condition.description
 
-%section.image{:style => "background-image:url(#{@condition.image.url})"}
+//%section.image{:style => "background-image:url(#{@condition.image.url})"}
 
 %section.steps
   - @condition.repeatables.reverse_each do |br|
